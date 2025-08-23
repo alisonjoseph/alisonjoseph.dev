@@ -74,7 +74,7 @@ export default function Home() {
             <Stack gap={7}>
               <PasswordInput
                 labelText="Enter password"
-                defaultWidth={300}
+                // defaultWidth={300}
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

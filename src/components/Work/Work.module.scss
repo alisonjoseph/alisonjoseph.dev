@@ -1,5 +1,6 @@
 @use "@carbon/react/scss/theme" as *;
 @use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/breakpoint" as *;
 
 .grid {
   position: relative;
@@ -24,11 +25,11 @@
 }
 
 .grid img {
-  width: 100%;
+  width: 50%;
   height: auto;
   max-width: 100%;
-}
 
-// .items {
-//   display: flex;
-// }
+  @include breakpoint("md") {
+    width: 100%;
+  }
+}

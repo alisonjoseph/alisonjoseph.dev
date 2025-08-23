@@ -6,19 +6,17 @@
 @use "@carbon/react/scss/motion" as *;
 
 $nav-height: 50px;
-$header-height-sm: 300px;
 $header-height: 300px;
 
 .header {
-  height: $header-height-sm;
   position: relative;
   z-index: 9999;
   margin-bottom: $nav-height;
   background: black;
+  height: $header-height;
   padding-top: 200px;
 
   @include breakpoint("md") {
-    height: $header-height;
     padding-top: 120px;
   }
 }
@@ -45,7 +43,6 @@ $header-height: 300px;
 }
 
 // navigation
-
 .navigation__container {
   background: black;
   height: $nav-height;
@@ -93,15 +90,21 @@ $header-height: 300px;
   &:before {
     content: "";
     position: absolute;
-    bottom: 8px;
+    bottom: 12px;
     left: 55%;
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
-    width: 60%; // final size
-    height: 12px;
+    width: 50%;
+    height: 8px;
     background-color: $teal-80;
     transition: transform $duration-fast-02;
     z-index: -1;
+
+    @include breakpoint("md") {
+      height: 12px;
+      bottom: 8px;
+      width: 60%;
+    }
   }
 
   &:hover {

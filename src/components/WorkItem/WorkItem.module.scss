@@ -1,6 +1,7 @@
 @use "@carbon/react/scss/spacing" as *;
 @use "@carbon/react/scss/colors" as *;
 @use "@carbon/react/scss/motion" as *;
+@use "@carbon/react/scss/breakpoint" as *;
 
 .item {
   margin-bottom: $spacing-11;
@@ -9,23 +10,35 @@
 .item.expanded {
 }
 
+.imageContainer {
+  @include breakpoint-down("md") {
+    display: flex;
+  }
+}
+
 .item img {
-  // padding: 0 $spacing-01 $spacing-01 0;
-  // background: $teal-20;
   box-shadow: $spacing-03 $spacing-03 0 0 $teal-20;
-  margin-bottom: $spacing-04;
+  margin-bottom: $spacing-02;
 }
 
 .links {
-  display: flex;
-  align-items: center;
-  margin: $spacing-04 0;
+  margin: $spacing-03 0 0 $spacing-06;
+
+  @include breakpoint("md") {
+    display: flex;
+    align-items: center;
+    margin: $spacing-04 0;
+  }
 }
 
 .link {
   display: flex;
   align-items: center;
   padding-right: $spacing-05;
+
+  @include breakpoint-down("md") {
+    margin-bottom: $spacing-03;
+  }
 
   a {
     margin-left: $spacing-02;
@@ -46,10 +59,17 @@
 }
 
 .summary {
-  padding-right: 25%;
+  @include breakpoint("lg") {
+    padding-right: 25%;
+  }
 }
 
 .toggle {
-  position: relative;
-  top: -48px;
+  // position: relative;
+  // top: -48px;
+  margin-top: $spacing-06;
+
+  @include breakpoint("md") {
+    margin: 0;
+  }
 }

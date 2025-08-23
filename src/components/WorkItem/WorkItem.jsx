@@ -10,12 +10,12 @@ function WorkItem({ title, image, links = [], sections = [], summary }) {
   return (
     <article className={`${styles.item} ${expanded ? styles.expanded : ""}`}>
       <Grid>
-        <Column sm={4} md={8} lg={12}>
+        <Column sm={4} md={5} lg={12}>
           <h3>{title}</h3>
 
           {summary && <p className={styles.summary}>{summary}</p>}
         </Column>
-        <Column sm={4} md={8} lg={4}>
+        <Column sm={4} md={3} lg={4} className={styles.imageContainer}>
           <Image
             src={image.src}
             width={image.width}
@@ -37,10 +37,10 @@ function WorkItem({ title, image, links = [], sections = [], summary }) {
 
       {sections.map(({ heading, content }, i) => (
         <Grid key={i} className={styles.section}>
-          <Column sm={4} md={2} lg={4}>
+          <Column sm={1} md={2} lg={4}>
             <h4>{heading}</h4>
           </Column>
-          <Column sm={4} md={6} lg={12}>
+          <Column sm={3} md={6} lg={12}>
             {content}
           </Column>
         </Grid>
