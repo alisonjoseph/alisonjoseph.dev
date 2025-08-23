@@ -33,6 +33,16 @@ const Contact = () => {
           >
             GitHub
           </Link>
+          . You can also grab my{" "}
+          <Link
+            inline
+            size="lg"
+            href="/files/alisonjoseph.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            resume here
+          </Link>
           .
         </p>
       </Column>
