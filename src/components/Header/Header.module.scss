@@ -3,10 +3,11 @@
 @use "@carbon/react/scss/colors" as *;
 @use "@carbon/react/scss/spacing" as *;
 @use "@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/motion" as *;
 
 $nav-height: 50px;
 $header-height-sm: 300px;
-$header-height: 500px;
+$header-height: 300px;
 
 .header {
   height: $header-height-sm;
@@ -18,7 +19,7 @@ $header-height: 500px;
 
   @include breakpoint("md") {
     height: $header-height;
-    padding-top: 300px;
+    padding-top: 120px;
   }
 }
 
@@ -82,14 +83,33 @@ $header-height: 500px;
   @include type-style("heading-01");
   padding: 0 $spacing-06;
   background: transparent;
-  color: white;
+  color: $teal-10;
   font-weight: 300 !important;
 
   @include breakpoint("md") {
-    @include type-style("heading-04");
+    @include type-style("heading-03");
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 55%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 60%; // final size
+    height: 12px;
+    background-color: $teal-80;
+    transition: transform $duration-fast-02;
+    z-index: -1;
   }
 
   &:hover {
-    color: $teal-30;
+    color: white;
+    text-decoration: none;
+
+    &:before {
+      transform: translateX(-50%) scaleX(1);
+    }
   }
 }

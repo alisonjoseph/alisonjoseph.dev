@@ -73,6 +73,19 @@ h3 {
   @include type-style("fluid-heading-04", true);
   font-weight: 300 !important;
   margin-bottom: $spacing-03;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 16px;
+    width: 98%;
+    height: 12px;
+    background-color: $teal-20;
+  }
 }
 
 h4 {

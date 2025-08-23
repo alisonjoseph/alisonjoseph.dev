@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { UpToTop } from "@carbon/react/icons";
+import { UpToTop, ArrowUp } from "@carbon/react/icons";
 import { button } from "./BackToTopBtn.module.scss";
 
 const BackToTopBtn = () => {
@@ -29,7 +29,7 @@ const BackToTopBtn = () => {
       type="button"
       aria-label="Back to Top"
     >
-      <UpToTop size={20} />
+      <ArrowUp size={20} />
     </button>
   );
 };
