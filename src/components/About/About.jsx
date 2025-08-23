@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Grid, Column } from "@carbon/react";
 
-import styles from "./about.module.scss";
+import styles from "./About.module.scss";
 
 const About = () => {
   return (
