@@ -37,10 +37,10 @@ function WorkItem({ title, image, links = [], sections = [], summary }) {
 
       {sections.map(({ heading, content }, i) => (
         <Grid key={i} className={styles.section}>
-          <Column sm={1} md={2} lg={4}>
+          <Column sm={4} md={2} lg={4}>
             <h4>{heading}</h4>
           </Column>
-          <Column sm={3} md={6} lg={12}>
+          <Column sm={4} md={6} lg={12}>
             {content}
           </Column>
         </Grid>

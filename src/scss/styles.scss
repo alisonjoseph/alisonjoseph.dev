@@ -91,6 +91,11 @@ h3 {
 h4 {
   @include type-style("fluid-heading-03", true);
   font-weight: 300 !important;
+  padding: $spacing-04 0;
+
+  @include breakpoint("md") {
+    padding: 0;
+  }
 }
 
 p,
