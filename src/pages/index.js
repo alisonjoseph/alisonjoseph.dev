@@ -51,19 +51,27 @@ export default function Home() {
         <title>Alison Joseph</title>
         <meta
           name="description"
-          content="Level 10 gymnast at Capital Gymnastics."
+          content="Hi, I'm Alison. I'm an engineering manager and development
+          lead on IBM's Carbon Design System. I love working in the space where
+          design meets code, leading teams that build and maintain our
+          component library and partnering with leaders across the business to
+          scale design system adoption."
         />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Alison Joseph" />
         <meta
           property="og:description"
-          content="Level 10 gymnast at Capital Gymnastics."
+          content="Hi, I'm Alison. I'm an engineering manager and development
+          lead on IBM's Carbon Design System. I love working in the space where
+          design meets code, leading teams that build and maintain our
+          component library and partnering with leaders across the business to
+          scale design system adoption."
         />
-        <meta property="og:url" content="https://rowynjoseph.com" />
+        <meta property="og:url" content="https://alisonjoseph.dev" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://rowynjoseph.com/og-image.png"
+          content="https://alisonjoseph.dev/og-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
