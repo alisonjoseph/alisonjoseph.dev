@@ -1,0 +1,95 @@
+@use "@carbon/react/scss/theme" as *;
+@use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/breakpoint" as *;
+
+$nav-height: 50px;
+$header-height-sm: 300px;
+$header-height: 500px;
+
+.header {
+  height: $header-height-sm;
+  position: relative;
+  z-index: 9999;
+  margin-bottom: $nav-height;
+  background: black;
+  padding-top: 200px;
+
+  @include breakpoint("md") {
+    height: $header-height;
+    padding-top: 300px;
+  }
+}
+
+.grid {
+  height: 100%;
+}
+
+.column {
+  position: relative;
+  height: 100%;
+}
+
+.header h1 {
+  @include type-style("fluid-heading-06", true);
+  color: white;
+  margin: -$spacing-05 0;
+}
+
+.subtitle {
+  @include type-style("fluid-heading-05", true);
+  color: $teal-30;
+  margin-bottom: $spacing-01;
+}
+
+// navigation
+
+.navigation__container {
+  background: black;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigation__container :global(.cds--header) {
+  position: relative;
+  background: transparent;
+  height: $nav-height;
+  border: none;
+}
+
+.navigation {
+  height: $nav-height;
+}
+
+.navigation :global(.cds--header__nav) {
+  padding: 0;
+  display: block;
+}
+
+.navigation :global(.cds--header__nav::before) {
+  display: none;
+}
+
+.navigation :global(.cds--header__menu-bar) {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.navigation :global(a.cds--header__menu-item) {
+  @include type-style("heading-01");
+  padding: 0 $spacing-06;
+  background: transparent;
+  color: white;
+  font-weight: 300 !important;
+
+  @include breakpoint("md") {
+    @include type-style("heading-04");
+  }
+
+  &:hover {
+    color: $teal-30;
+  }
+}

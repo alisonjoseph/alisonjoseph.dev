@@ -1,0 +1,33 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/motion" as *;
+@use "@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/theme" as *;
+
+.button {
+  width: $spacing-09;
+  height: $spacing-09;
+  border-radius: 50%;
+  border-color: transparent;
+  background: mix($teal-20, $teal-30, 50%);
+  transition: all $duration-fast-02;
+  z-index: 9900;
+  padding-top: 0.325rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: $spacing-06;
+  right: $spacing-05;
+
+  @include breakpoint("md") {
+    bottom: $spacing-09;
+    right: $spacing-07;
+  }
+
+  &:hover {
+    background: mix($teal-20, $teal-30, 40%);
+  }
+
+  svg {
+    fill: $icon-secondary;
+  }
+}

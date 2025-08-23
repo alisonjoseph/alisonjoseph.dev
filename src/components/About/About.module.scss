@@ -1,0 +1,6 @@
+@use "@carbon/react/scss/theme" as *;
+@use "@carbon/react/scss/type" as *;
+
+.p {
+  @include type-style("fluid-paragraph-01", true);
+}

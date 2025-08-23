@@ -1,0 +1,55 @@
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/motion" as *;
+
+.item {
+  margin-bottom: $spacing-11;
+}
+
+.item.expanded {
+}
+
+.item img {
+  // padding: 0 $spacing-01 $spacing-01 0;
+  // background: $teal-20;
+  box-shadow: $spacing-03 $spacing-03 0 0 $teal-20;
+  margin-bottom: $spacing-04;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin: $spacing-04 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding-right: $spacing-05;
+
+  a {
+    margin-left: $spacing-02;
+  }
+}
+
+.section {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all $duration-fast-02;
+
+  .expanded & {
+    height: auto;
+    opacity: 100%;
+    margin: 0 0 $spacing-09 0;
+  }
+}
+
+.summary {
+  padding-right: 25%;
+}
+
+.toggle {
+  position: relative;
+  top: -48px;
+}

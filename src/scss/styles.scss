@@ -1,0 +1,116 @@
+@use "@carbon/react/scss/themes" as *;
+@use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/spacing" as *;
+
+//overriding theme tokens and adding a custom token
+@use "@carbon/react/scss/theme" with (
+  $theme: (
+    // redefine existing tokens to new values to teal
+    focus: $teal-60,
+    interactive: $teal-60,
+    icon-interactive: $teal-60,
+    link-primary: $teal-60,
+    link-primary-hover: $teal-70,
+    link-secondary: $teal-70,
+    link-inverse: $teal-40,
+    link-inverse-hover: $teal-30,
+    highlight: $teal-20,
+    background-brand: $teal-20,
+  )
+);
+
+@use "@carbon/react/scss/components/button/tokens" as button-tokens with (
+  $button-primary: $teal-60,
+  $button-primary-hover: $teal-70,
+  $button-primary-active: $teal-80,
+  $button-tertiary: $teal-60,
+  $button-tertiary-hover: $teal-70,
+  $button-tertiary-active: $teal-80
+);
+
+@use "@carbon/react";
+
+// @use "@carbon/react/scss/themes";
+@use "@carbon/react/scss/theme" as *;
+
+:root {
+  @include theme.theme();
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: $spacing-08;
+
+  @include breakpoint("md") {
+    scroll-padding-top: $spacing-08;
+  }
+}
+
+body {
+  background: $background;
+  color: $text-primary;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h2 {
+  color: $teal-60;
+  font-weight: 300;
+  margin: $spacing-04 0;
+}
+
+h3 {
+  @include type-style("fluid-heading-04", true);
+  font-weight: 300 !important;
+  margin-bottom: $spacing-03;
+}
+
+h4 {
+  @include type-style("fluid-heading-03", true);
+  font-weight: 300 !important;
+}
+
+p,
+ul {
+  @include type-style("body-02");
+  margin-bottom: $spacing-06;
+  padding-right: $spacing-07;
+}
+
+li {
+  @include type-style("body-02");
+}
+
+p em {
+  font-style: normal;
+  font-weight: bold;
+  color: $teal-60;
+}
+
+.cds--css-grid {
+  @include breakpoint("md") {
+    inline-size: 85%;
+  }
+
+  @include breakpoint("lg") {
+    inline-size: 75%;
+  }
+}
+
+section {
+  padding: $spacing-05 0;
+
+  @include breakpoint("md") {
+    padding: $spacing-10 0;
+  }
+}

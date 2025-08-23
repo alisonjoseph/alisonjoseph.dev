@@ -1,0 +1,35 @@
+@use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/type" as *;
+@use "@carbon/react/scss/breakpoint" as *;
+
+.section {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $teal-20;
+    z-index: -1;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.section p {
+  @include type-style("fluid-paragraph-01", true);
+}
+
+.section :global(.cds--link) {
+  @include type-style("fluid-paragraph-01", true);
+  color: $teal-80;
+  font-weight: bold;
+
+  &:hover {
+    color: $teal-90;
+  }
+}

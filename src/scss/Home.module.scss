@@ -1,0 +1,25 @@
+@use "@carbon/react/scss/theme" as *;
+@use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/spacing" as *;
+@use "@carbon/react/scss/type" as *;
+
+.passwordContainer {
+  max-width: 300px;
+  margin: $spacing-11 auto;
+}
+
+.images {
+  display: flex;
+
+  img {
+    width: 33.333%;
+    height: auto;
+  }
+}
+
+.footer {
+  @include type-style("legal-01");
+  padding: $spacing-06 0 0 0;
+  background: $teal-90;
+  color: $text-inverse;
+}
