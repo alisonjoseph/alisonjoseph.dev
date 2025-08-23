@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/80ff0a46-13bd-4ff8-a4d3-181b2ad12dce/deploy-status)](https://app.netlify.com/projects/rowynjoseph/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2950c5af-23fc-4d66-bb1b-bcb870453688/deploy-status)](https://app.netlify.com/sites/alisonjoseph/deploys)
 
 # alisonjoseph.dev ✨
 
