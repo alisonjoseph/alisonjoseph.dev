@@ -1,7 +1,7 @@
 import "../scss/styles.scss";
 import Head from "next/head";
 
-const GA_TRACKING_ID = "G-THFZ76W853";
+const GA_TRACKING_ID = "G-X3KC0ZSVV7";
 
 function MyApp({ Component, pageProps }) {
   return (
