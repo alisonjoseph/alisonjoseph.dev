@@ -116,3 +116,43 @@ $header-height: 300px;
     }
   }
 }
+
+// Navigation content container
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+// Name in navigation bar
+.navName {
+  @include type-style("heading-02");
+  color: white;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all $duration-fast-02;
+  pointer-events: none;
+  font-weight: bold !important;
+
+  @include breakpoint("md") {
+    @include type-style("heading-03");
+  }
+
+  span {
+    color: $teal-20;
+    display: none;
+    font-weight: 300 !important;
+
+    @include breakpoint("lg") {
+      display: inline;
+    }
+  }
+}
+
+.navNameVisible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
