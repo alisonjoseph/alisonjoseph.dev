@@ -7,9 +7,6 @@
   margin-bottom: $spacing-11;
 }
 
-.item.expanded {
-}
-
 .imageContainer {
   @include breakpoint-down("md") {
     display: flex;

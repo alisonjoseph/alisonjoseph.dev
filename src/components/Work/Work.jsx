@@ -2,7 +2,29 @@ import React from "react";
 import Image from "next/image";
 import WorkItem from "../WorkItem";
 import { Grid, Column, UnorderedList, ListItem, Link } from "@carbon/react";
-import { LogoGithub, Wikis } from "@carbon/icons-react";
+import { LogoGithub, Notebook, Wikis } from "@carbon/icons-react";
+
+const LogoMedium = ({ size = 16, ...props }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 1024 1024"
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-label="Medium logo"
+    {...props}
+  >
+    <rect width="1024" height="1024" rx="179.649" fill="black" />
+    <path
+      d="M1024 704.736V797.736C1018.16 798.3 1012.16 798.588 1006 798.588C896.061 798.588 834.166 707.016 831.497 592.432C831.418 588.002 831.448 583.6 831.546 579.228C831.606 576.501 831.714 573.783 831.852 571.075C831.921 569.628 831.989 568.269 832.098 566.753C832.206 565.236 832.315 563.72 832.443 562.204C836.401 511.613 852.687 466.594 879.568 433.284C896.267 412.606 916.334 396.852 939.09 386.316C959.078 376.253 987.17 370.699 1010.07 370.699H1011.06C1015.4 370.699 1019.71 370.844 1024 371.13V396.717C1019.45 395.47 1014.58 394.801 1009.4 394.715C963.086 395.67 935.486 451.145 932.049 528.007H1024V549.669H929.972L929.942 549.689C925.703 624.579 966.692 687.87 1024 704.736Z"
+      fill="white"
+    />
+    <path
+      d="M836.115 244.625L836.923 244.448V238.195H672.014L518.891 598.084L365.768 238.195H188.059V244.448L188.857 244.625C218.957 251.419 234.239 261.551 234.239 298.091V725.872C234.239 762.412 218.898 772.544 188.798 779.338L188 779.516V785.788H308.57V779.535L307.773 779.358C277.672 772.564 262.39 762.432 262.39 725.892V322.905L459.093 785.788H470.249L672.683 309.996V736.457C670.104 765.317 654.96 774.228 627.705 780.382L626.897 780.569V786.773H836.923V780.569L836.115 780.382C808.831 774.228 793.322 765.317 790.743 736.457L790.605 298.091H790.743C790.743 261.551 806.024 251.419 836.115 244.625Z"
+      fill="white"
+    />
+  </svg>
+);
 
 import styles from "./Work.module.scss";
 
@@ -20,7 +42,7 @@ const Work = () => {
             title="Carbon Design System · UI Shell Improvements in Carbon Labs"
             summary="The Carbon UI Shell was expanded and enhanced in Carbon Labs to create a consistent, unified experience across IBM Software. Building on the existing shell, the work added new React components where gaps existed and aligned diverse business needs into shared patterns."
             image={{
-              src: "/images/labs.png",
+              src: "/images/uishell.png",
               width: 1600,
               height: 920,
               alt: "",
@@ -34,7 +56,7 @@ const Work = () => {
               {
                 href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
                 label: "Storybook",
-                icon: <Wikis />,
+                icon: <Notebook />,
               },
             ]}
             sections={[
@@ -209,20 +231,20 @@ const Work = () => {
             title="Carbon Accessibility Testing & Status Dashboard"
             summary="summary here"
             image={{
-              src: "/images/labs.png",
+              src: "/images/a11y.png",
               width: 1600,
               height: 920,
               alt: "",
             }}
             links={[
               {
-                href: "https://github.com/carbon-design-system/carbon-labs/tree/main/packages/react/src/components/UIShell",
+                href: "https://github.com/carbon-design-system/carbon/blob/main/e2e/components/Accordion/Accordion-test.avt.e2e.js",
                 label: "GitHub",
                 icon: <LogoGithub />,
               },
               {
-                href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
-                label: "Storybook",
+                href: "https://carbondesignsystem.com/components/overview/accessibility-status/",
+                label: "Accessibility status",
                 icon: <Wikis />,
               },
             ]}
@@ -264,23 +286,38 @@ const Work = () => {
 
           <WorkItem
             title="Figma Code Connect · Carbon Integration"
-            summary="summary here"
+            summary={
+              <>
+                <p className={styles.introLink}>
+                  <LogoMedium />
+                  <Link
+                    rel="noopener"
+                    href="https://medium.com/carbondesign/carbon-and-figma-code-connect-redefining-the-design-to-code-experience-836eb3f454fc"
+                  >
+                    Carbon and Figma Code Connect: Redefining the Design-to-Code
+                    Experience
+                  </Link>
+                </p>
+                <p>
+                  Code Connect bridges the gap between design and development by
+                  making design system component code directly accessible in
+                  Figma’s Dev Mode. This integration allows developers to view
+                  real Carbon React code within Figma, ensuring consistency and
+                  accuracy throughout the design-to-code process.
+                </p>
+              </>
+            }
             image={{
-              src: "/images/labs.png",
+              src: "/images/codeconnect.png",
               width: 1600,
               height: 920,
               alt: "",
             }}
             links={[
               {
-                href: "https://github.com/carbon-design-system/carbon-labs/tree/main/packages/react/src/components/UIShell",
+                href: "https://github.com/carbon-design-system/carbon/tree/main/packages/react/code-connect",
                 label: "GitHub",
                 icon: <LogoGithub />,
-              },
-              {
-                href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
-                label: "Storybook",
-                icon: <Wikis />,
               },
             ]}
             sections={[
@@ -323,20 +360,26 @@ const Work = () => {
             title="Carbon for AI"
             summary="summary here"
             image={{
-              src: "/images/labs.png",
+              src: "/images/ai.png",
               width: 1600,
               height: 920,
               alt: "",
             }}
             links={[
               {
-                href: "https://github.com/carbon-design-system/carbon-labs/tree/main/packages/react/src/components/UIShell",
+                href: "https://github.com/carbon-design-system/carbon",
                 label: "GitHub",
                 icon: <LogoGithub />,
               },
               {
-                href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
+                href: "https://react.carbondesignsystem.com/?path=/docs/components-ailabel--overview",
                 label: "Storybook",
+                icon: <Notebook />,
+              },
+
+              {
+                href: "https://carbondesignsystem.com/guidelines/carbon-for-ai/",
+                label: "Guidelines",
                 icon: <Wikis />,
               },
             ]}
@@ -394,7 +437,7 @@ const Work = () => {
               {
                 href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
                 label: "Storybook",
-                icon: <Wikis />,
+                icon: <Notebook />,
               },
             ]}
             sections={[
@@ -451,7 +494,7 @@ const Work = () => {
               {
                 href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
                 label: "Storybook",
-                icon: <Wikis />,
+                icon: <Notebook />,
               },
             ]}
             sections={[
@@ -508,7 +551,7 @@ const Work = () => {
               {
                 href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
                 label: "Storybook",
-                icon: <Wikis />,
+                icon: <Notebook />,
               },
             ]}
             sections={[

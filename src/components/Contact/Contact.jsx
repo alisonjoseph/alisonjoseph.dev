@@ -18,7 +18,6 @@ const Contact = () => {
             inline
             size="lg"
             href="https://www.linkedin.com/in/alisonjoseph/"
-            target="_blank"
             rel="noopener"
           >
             LinkedIn
@@ -28,19 +27,12 @@ const Contact = () => {
             inline
             size="lg"
             href="https://github.com/alisonjoseph"
-            target="_blank"
             rel="noopener"
           >
             GitHub
           </Link>
           . You can also grab my{" "}
-          <Link
-            inline
-            size="lg"
-            href="/files/alisonjoseph.pdf"
-            target="_blank"
-            rel="noopener"
-          >
+          <Link inline size="lg" href="/files/alisonjoseph.pdf" rel="noopener">
             resume here
           </Link>
           .

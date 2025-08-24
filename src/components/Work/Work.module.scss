@@ -1,6 +1,7 @@
 @use "@carbon/react/scss/theme" as *;
 @use "@carbon/react/scss/colors" as *;
 @use "@carbon/react/scss/breakpoint" as *;
+@use "@carbon/react/scss/spacing" as *;
 
 .grid {
   position: relative;
@@ -31,5 +32,14 @@
 
   @include breakpoint("md") {
     width: 100%;
+  }
+}
+
+.introLink {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin-left: $spacing-02;
   }
 }

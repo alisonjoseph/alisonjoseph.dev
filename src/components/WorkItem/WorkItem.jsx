@@ -10,12 +10,12 @@ function WorkItem({ title, image, links = [], sections = [], summary }) {
   return (
     <article className={`${styles.item} ${expanded ? styles.expanded : ""}`}>
       <Grid>
-        <Column sm={4} md={5} lg={12}>
+        <Column sm={4} md={5} lg={10}>
           <h3>{title}</h3>
 
           {summary && <p className={styles.summary}>{summary}</p>}
         </Column>
-        <Column sm={4} md={3} lg={4} className={styles.imageContainer}>
+        <Column sm={4} md={3} lg={6} className={styles.imageContainer}>
           <Image
             src={image.src}
             width={image.width}
