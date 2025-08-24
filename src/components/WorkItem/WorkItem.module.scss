@@ -4,7 +4,24 @@
 @use "@carbon/react/scss/breakpoint" as *;
 
 .item {
-  margin-bottom: $spacing-11;
+  padding: $spacing-06 0;
+  position: relative;
+
+  &:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    background: $teal-10;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &:nth-child(even)::after {
+    background: mix($teal-20, $teal-10, 22%);
+  }
 }
 
 .imageContainer {

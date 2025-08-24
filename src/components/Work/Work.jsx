@@ -443,6 +443,7 @@ const Work = () => {
                   <LogoMedium />
                   <Link
                     rel="noopener"
+                    size="md"
                     href="https://medium.com/carbondesign/carbon-and-figma-code-connect-redefining-the-design-to-code-experience-836eb3f454fc"
                   >
                     Carbon and Figma Code Connect: Redefining the Design-to-Code
@@ -469,6 +470,11 @@ const Work = () => {
                 href: "https://github.com/carbon-design-system/carbon/tree/main/packages/react/code-connect",
                 label: "GitHub",
                 icon: <LogoGithub />,
+              },
+              {
+                href: "https://medium.com/carbondesign/carbon-and-figma-code-connect-redefining-the-design-to-code-experience-836eb3f454fc",
+                label: "Medium Article",
+                icon: <LogoMedium />,
               },
             ]}
             sections={[
