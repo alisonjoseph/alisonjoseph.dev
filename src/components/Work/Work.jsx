@@ -2,7 +2,13 @@ import React from "react";
 import Image from "next/image";
 import WorkItem from "../WorkItem";
 import { Grid, Column, UnorderedList, ListItem, Link } from "@carbon/react";
-import { LogoGithub, Notebook, Wikis } from "@carbon/icons-react";
+import {
+  LogoGithub,
+  Notebook,
+  Wikis,
+  PresentationFile,
+  Microphone,
+} from "@carbon/icons-react";
 
 const LogoMedium = ({ size = 16, ...props }) => (
   <svg
@@ -31,7 +37,7 @@ import styles from "./Work.module.scss";
 
 const Work = () => {
   return (
-    <Grid condensed as="section" id="Work" className={styles.grid}>
+    <Grid condensed as="section" id="work" className={styles.grid}>
       <Column sm={4} md={8} lg={16}>
         {/* <Grid>
           <Column sm={4} md={8} lg={16}>
@@ -719,6 +725,11 @@ const Work = () => {
                 label: "Storybook",
                 icon: <Notebook />,
               },
+              {
+                href: "https://www.knapsack.cloud/patterns",
+                label: "Speaker",
+                icon: <Microphone />,
+              },
             ]}
             sections={[
               {
@@ -832,6 +843,11 @@ const Work = () => {
                 href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
                 label: "Storybook",
                 icon: <Notebook />,
+              },
+              {
+                href: "https://www.gatsbyjs.com/ibm-themes-webinar/",
+                label: "Gatsby webinar",
+                icon: <PresentationFile />,
               },
             ]}
             sections={[
