@@ -99,13 +99,16 @@ h4 {
 }
 
 p,
-ul {
+ul,
+.cds--list--unordered,
+.cds--list--ordered {
   @include type-style("body-02");
   margin-bottom: $spacing-06;
   padding-right: $spacing-07;
 }
 
-li {
+li,
+.cds--list--item {
   @include type-style("body-02");
 }
 
@@ -130,5 +133,13 @@ section {
 
   @include breakpoint("md") {
     padding: $spacing-10 0;
+  }
+}
+
+.cds--btn {
+  box-shadow: $spacing-02 $spacing-02 0 0 $teal-20;
+
+  &:hover {
+    box-shadow: $spacing-02 $spacing-02 0 0 $teal-30;
   }
 }

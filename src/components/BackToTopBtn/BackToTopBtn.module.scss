@@ -7,7 +7,6 @@
 .button {
   width: $spacing-09;
   height: $spacing-09;
-  // border-radius: 50%;
   border-color: transparent;
   background: mix($teal-20, $teal-30, 50%);
   transition: all $duration-fast-02;
@@ -17,6 +16,7 @@
   position: fixed;
   bottom: $spacing-06;
   right: $spacing-05;
+  box-shadow: $spacing-02 $spacing-02 0 0 $teal-50;
 
   @include breakpoint("md") {
     bottom: $spacing-09;
@@ -24,7 +24,8 @@
   }
 
   &:hover {
-    background: mix($teal-20, $teal-30, 40%);
+    background: $teal-30;
+    box-shadow: $spacing-02 $spacing-02 0 0 $teal-70;
   }
 
   svg {

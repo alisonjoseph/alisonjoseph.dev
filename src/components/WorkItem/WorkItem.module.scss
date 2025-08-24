@@ -24,7 +24,11 @@
   @include breakpoint("md") {
     display: flex;
     align-items: center;
-    margin: $spacing-04 0;
+    margin: $spacing-04 0 0 0;
+
+    .expanded & {
+      margin-bottom: $spacing-09;
+    }
   }
 }
 

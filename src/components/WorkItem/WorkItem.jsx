@@ -50,7 +50,7 @@ function WorkItem({ title, image, links = [], sections = [], summary }) {
           <Button
             renderIcon={expanded ? ChevronUp : ChevronDown}
             size="sm"
-            kind="tertiary"
+            kind="primary"
             className={styles.toggle}
             onClick={() => setExpanded(!expanded)}
           >
