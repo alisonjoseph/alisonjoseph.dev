@@ -12,6 +12,7 @@ const LogoMedium = ({ size = 16, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     role="img"
     aria-label="Medium logo"
+    style={{ minWidth: "16px", minHeight: "16px" }}
     {...props}
   >
     <rect width="1024" height="1024" rx="179.649" fill="black" />

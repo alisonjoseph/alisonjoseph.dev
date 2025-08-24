@@ -37,7 +37,8 @@
 
 .introLink {
   display: flex;
-  align-items: center;
+  align-items: top;
+  width: 120%;
 
   a {
     margin-left: $spacing-02;
