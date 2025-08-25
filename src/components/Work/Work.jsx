@@ -981,7 +981,7 @@ const Work = () => {
             title="Carbon Design System"
             intro="summary here"
             image={{
-              src: "/images/labs.png",
+              src: "/images/carbon.png",
               width: 1600,
               height: 920,
               alt: "",
@@ -1041,9 +1041,9 @@ const Work = () => {
 
           <WorkItem
             title="Carbon Gatsby Theme"
-            intro="summary here"
+            intro="Led development of gatsby-theme-carbon during IBM’s migration to Carbon v10 and the new IBM Design Language. Instead of building separate sites, I partnered with design to deliver a unified Gatsby theme that now powers an ecosystem of both internal and external IBM websites."
             image={{
-              src: "/images/labs.png",
+              src: "/images/gatsby-theme.png",
               width: 1600,
               height: 920,
               alt: "",
@@ -1068,17 +1068,129 @@ const Work = () => {
             sections={[
               {
                 heading: "Summary",
-                content: <p>summary</p>,
+                content: (
+                  <p>
+                    As development lead, created gatsby-theme-carbon to unify
+                    IBM's design ecosystem under a single, reusable Gatsby
+                    theme. Built during the Carbon v10 and IBM Design Language
+                    migration, the theme now powers hundreds of internal and
+                    external repositories and enables teams to launch IBM Design
+                    Language-compliant sites in hours rather than months.
+                    Partnered closely with designers to ensure the theme
+                    properly expressed design principles while creating
+                    sustainable architecture for content authors and developers.
+                  </p>
+                ),
               },
               {
                 heading: "Background",
-                content: <p>background</p>,
+                content: (
+                  <>
+                    <p>
+                      <strong>The Challenge:</strong> With the launch of Carbon
+                      v10 and the new IBM Design Language, IBM needed to rebuild
+                      both the Carbon Design System website and the IBM Design
+                      Language website. Building these separately would have
+                      duplicated effort and risked inconsistency across IBM's
+                      design presence. Meanwhile, teams across IBM struggled to
+                      create sites that properly reflected the IBM Design
+                      Language without dedicated development resources.
+                    </p>
+                    <p>
+                      <strong>The Opportunity:</strong> Gatsby's theme system
+                      provided a way to encapsulate all configuration and
+                      implementation details into a reusable package. This meant
+                      we could build once and enable dozens of teams to launch
+                      consistent, high-quality sites with minimal technical
+                      overhead.
+                    </p>
+                    <p>
+                      <strong>My Role:</strong> As development lead, I owned the
+                      technical architecture and implementation strategy while
+                      partnering closely with Carbon designers to ensure the
+                      theme properly expressed the IBM Design Language across
+                      different use cases.
+                    </p>
+                  </>
+                ),
               },
               {
                 heading: "Approach",
                 content: (
                   <>
-                    <p>approach</p>
+                    <p>
+                      <strong>Theme Architecture & Gatsby Integration:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Built on Gatsby's theme composition system, allowing
+                        teams to shadow (override) components while maintaining
+                        core functionality
+                      </ListItem>
+                      <ListItem>
+                        Implemented MDX-first content strategy, enabling content
+                        authors to write in Markdown with embedded React
+                        components
+                      </ListItem>
+                      <ListItem>
+                        Created flexible component shadowing system that
+                        balanced consistency with customization needs
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Design System Integration:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Integrated Carbon React components as the foundation
+                        while building theme-specific patterns for common
+                        website needs
+                      </ListItem>
+                      <ListItem>
+                        Ensured automatic adherence to IBM Design Language
+                        principles through built-in typography, spacing, and
+                        color systems
+                      </ListItem>
+                      <ListItem>
+                        Created documentation site architecture that worked for
+                        both technical and brand-focused content
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Content Author Experience:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Designed MDX-based content system that allowed
+                        non-technical team members to create rich, interactive
+                        pages
+                      </ListItem>
+                      <ListItem>
+                        Built sidebar navigation system that is easily
+                        configurable for designers, developers or content
+                        editors
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Scalability & Maintenance:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Established versioning strategy that allowed theme
+                        updates to propagate across all dependent sites
+                      </ListItem>
+                      <ListItem>
+                        Built theme with plugin architecture to support
+                        different site needs (documentation, marketing, events)
+                      </ListItem>
+                      <ListItem>
+                        Created starter templates and comprehensive
+                        documentation to reduce onboarding friction
+                      </ListItem>
+                    </UnorderedList>
                   </>
                 ),
               },
@@ -1086,7 +1198,35 @@ const Work = () => {
                 heading: "Challenges",
                 content: (
                   <>
-                    <p>challenges</p>
+                    <p>
+                      <strong>Technical Complexity Across Team Skills:</strong>{" "}
+                      The theme needed to serve both highly technical developers
+                      building documentation sites and content creators with
+                      minimal coding experience. Balancing powerful
+                      customization capabilities with simple content authoring
+                      required careful API design and extensive testing with
+                      both user types.
+                    </p>
+
+                    <p>
+                      <strong>IBM Design Language Translation:</strong>{" "}
+                      Converting IBM Design Language principles from print and
+                      brand guidelines into flexible web patterns was
+                      challenging. Each component needed to work across
+                      different content types while maintaining consistent brand
+                      expression. This required close collaboration with
+                      designers to validate that the theme truly captured the
+                      intended design language.
+                    </p>
+
+                    <p>
+                      <strong>Cross-Team Coordination:</strong> As the theme
+                      gained adoption, managing feedback and feature requests
+                      from multiple teams required careful prioritization. Each
+                      team had specific needs, but changes needed to benefit the
+                      broader ecosystem without breaking existing
+                      implementations.
+                    </p>
                   </>
                 ),
               },
@@ -1094,7 +1234,78 @@ const Work = () => {
                 heading: "Outcomes",
                 content: (
                   <>
-                    <p>outcomes</p>
+                    <p>
+                      <strong>Adoption & Scale:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Powers hundreds of internal and external repositories
+                        according to GitHub dependency tracking
+                      </ListItem>
+                      <ListItem>
+                        Serves as foundation for major IBM design properties
+                        including IBM Design, Carbon Design System, IBM Design
+                        Language, and IBM Design Research
+                      </ListItem>
+                      <ListItem>
+                        Receives ~1,127 weekly npm downloads demonstrating
+                        active community usage
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Developer & Content Author Efficiency:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Teams report migrating entire sites to the theme "in a
+                        matter of hours" versus months for custom development
+                      </ListItem>
+                      <ListItem>
+                        Content creators can launch new sites without dedicated
+                        development resources
+                      </ListItem>
+                      <ListItem>
+                        Testimonials highlight ability to focus on content
+                        rather than technical implementation
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Design Consistency:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Automatic compliance with IBM Design Language across all
+                        implementing sites
+                      </ListItem>
+                      <ListItem>
+                        Shared component library ensures visual solidarity
+                        across IBM's design ecosystem
+                      </ListItem>
+                      <ListItem>
+                        Theme-managed configuration eliminates common
+                        implementation inconsistencies
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Technical Foundation:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Created reusable model for design system-driven website
+                        themes
+                      </ListItem>
+                      <ListItem>
+                        Established patterns for MDX-based content management
+                        that other teams have adopted
+                      </ListItem>
+                      <ListItem>
+                        Built sustainable update mechanism where core
+                        improvements benefit entire ecosystem automatically
+                      </ListItem>
+                    </UnorderedList>
                   </>
                 ),
               },
