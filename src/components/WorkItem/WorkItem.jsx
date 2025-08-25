@@ -4,7 +4,7 @@ import { Grid, Column, Link, Button } from "@carbon/react";
 import { ChevronDown, ChevronUp } from "@carbon/icons-react";
 import styles from "./WorkItem.module.scss";
 
-function WorkItem({ title, image, links = [], sections = [], summary }) {
+function WorkItem({ title, image, links = [], sections = [], intro }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ function WorkItem({ title, image, links = [], sections = [], summary }) {
         <Column sm={4} md={5} lg={10}>
           <h3>{title}</h3>
 
-          {summary && <p className={styles.summary}>{summary}</p>}
+          {intro && <p className={styles.intro}>{intro}</p>}
         </Column>
         <Column sm={4} md={3} lg={6} className={styles.imageContainer}>
           <Image

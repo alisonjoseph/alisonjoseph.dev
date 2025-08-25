@@ -39,15 +39,10 @@ const Work = () => {
   return (
     <Grid condensed as="section" id="work" className={styles.grid}>
       <Column sm={4} md={8} lg={16}>
-        {/* <Grid>
-          <Column sm={4} md={8} lg={16}>
-            <h2>Work</h2>
-          </Column>
-        </Grid> */}
         <div className={styles.items}>
           <WorkItem
-            title="Carbon Design System · UI Shell Improvements in Carbon Labs"
-            summary="The Carbon UI Shell was expanded and enhanced in Carbon Labs to create a consistent, unified experience across IBM Software. Building on the existing shell, the work added new React components where gaps existed and aligned diverse business needs into shared patterns."
+            title="UI Shell Improvements in Carbon Labs"
+            intro="The Carbon UI Shell was expanded and enhanced in Carbon Labs to create a consistent, unified experience across IBM Software. Building on the existing shell, the work added new React components where gaps existed and aligned diverse business needs into shared patterns."
             image={{
               src: "/images/uishell.png",
               width: 1600,
@@ -71,38 +66,38 @@ const Work = () => {
                 heading: "Summary",
                 content: (
                   <p>
-                    As a development lead for IBM&apos;s Carbon Design System, I
-                    was responsible for expanding and enhancing the UI Shell to
-                    create a consistent platform experience across IBM Software.
-                    This effort involved building on the existing Carbon Shell,
-                    enhancing what was already there and adding new React
-                    components where gaps existed. Partnering closely with
-                    Carbon designers as well as design leaders and VPs from
-                    across the business, I helped balance diverse needs and
-                    align on shared patterns. By working in Carbon Labs, an
-                    open-source innovation space, we were able to move quickly,
-                    prototype and test ideas, and gain consensus on a unified
-                    shell approach.
+                    As development lead, expanded and enhanced Carbon's UI Shell
+                    to create a consistent platform experience across IBM
+                    Software. Built on the existing Carbon Shell by adding new
+                    React components where gaps existed and aligning diverse
+                    business needs into shared patterns. Partnered closely with
+                    Carbon designers and design leaders from across the business
+                    to balance varied requirements while working in Carbon Labs
+                    for rapid prototyping and validation.
                   </p>
                 ),
               },
               {
                 heading: "Background",
                 content: (
-                  <p>
-                    Carbon is IBM’s open source design system for digital
-                    products, providing a shared foundation of components,
-                    patterns, and guidelines. While it was widely adopted, the
-                    UI Shell hadn’t been updated much since its first release
-                    and there wasn’t clear guidance on how to compose
-                    navigation. Product teams filled the gaps on their own,
-                    which led to fragmented and inconsistent experiences across
-                    IBM Software. Many products also had needs that the current
-                    Shell couldn’t solve. Some required multi-product
-                    navigation, others needed deep nesting or filtering. These
-                    gaps and inconsistencies made it clear that a common
-                    platform and UI Shell experience was needed.
-                  </p>
+                  <>
+                    <p>
+                      <strong>The Challenge:</strong> Carbon's UI Shell hadn't
+                      been updated much since its first release and lacked clear
+                      guidance on navigation composition. Product teams filled
+                      gaps independently, leading to fragmented and inconsistent
+                      experiences across IBM Software. Many products had needs
+                      the current Shell couldn't solve - multi-product
+                      navigation, deep nesting, or filtering capabilities.
+                    </p>
+                    <p>
+                      <strong>My Role:</strong> As development lead, I
+                      facilitated working sessions with design leaders from
+                      across IBM's business units while leading hands-on
+                      development with a small team. I organized sprints, sized
+                      work, and contributed directly to building new components.
+                    </p>
+                  </>
                 ),
               },
               {
@@ -110,50 +105,45 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      I facilitated regular working sessions with design leaders
-                      from across IBM&apos;s business units while also leading
-                      the hands-on development with a small dev team. I
-                      organized our sprints, sized the work, and contributed
-                      directly to building the new components. We partnered
-                      early with IBM&apos;s accessibility team to test as we
-                      built, making sure the Shell met accessibility
-                      requirements from the start. Working in Carbon Labs gave
-                      us the freedom to move quickly without being constrained
-                      by the stability requirements of the core library.
+                      <strong>Cross-functional Collaboration:</strong>{" "}
+                      Facilitated regular working sessions with design leaders
+                      while leading development. Partnered early with IBM's
+                      accessibility team to test as we built, ensuring the Shell
+                      met accessibility requirements from the start.
                     </p>
-                    <p>My work centered on:</p>
+
+                    <p>
+                      <strong>Key Focus Areas:</strong>
+                    </p>
                     <UnorderedList>
                       <ListItem>
-                        <strong>Rapid prototyping:</strong> Partnering with
+                        <strong>Rapid prototyping:</strong> Partnered with
                         designers to explore navigation patterns and
                         interactions, validating them with stakeholders before
-                        finalizing.
+                        finalizing
                       </ListItem>
                       <ListItem>
-                        <strong>Balancing needs:</strong> Accounting for varied
+                        <strong>Balancing needs:</strong> Accounted for varied
                         business requirements, from multi-product navigation to
-                        deep nesting and filtering.
+                        deep nesting and filtering
                       </ListItem>
                       <ListItem>
-                        <strong>Building flexibility:</strong> Developing a new
-                        shell structure made of composable React components,
-                        including a double-wide main navigation for
-                        multi-product access, a mobile-friendly version with
-                        back navigation, and a configurable in-product rail with
-                        pinning and auto expansion.
+                        <strong>Building flexibility:</strong> Developed
+                        composable React components including double-wide main
+                        navigation, mobile-friendly version with back
+                        navigation, and configurable in-product rail with
+                        pinning and auto expansion
                       </ListItem>
                       <ListItem>
-                        <strong>Ensuring compatibility:</strong> Even while
-                        building in Carbon Labs, we made sure our work
-                        wouldn&apos;t break the existing functionality in the
-                        core Carbon React library, then promote back into Carbon
-                        React.
+                        <strong>Ensuring compatibility:</strong> Maintained
+                        compatibility with existing Carbon React functionality
+                        while building in Labs for eventual promotion back to
+                        core
                       </ListItem>
                       <ListItem>
-                        <strong>Stakeholder alignment:</strong> Using Labs as a
-                        safe place to &quot;break&quot; and iterate fast, while
-                        building trust that the final design would meet broad
-                        needs.
+                        <strong>Stakeholder alignment:</strong> Used Labs as a
+                        safe space to iterate quickly while building trust that
+                        the final design would meet broad needs
                       </ListItem>
                     </UnorderedList>
                   </>
@@ -164,35 +154,35 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      One of the biggest challenges was the wide range of
-                      product needs. Some teams required robust multi-product
-                      navigation, while others prioritized lighter
-                      single-product rails. Others needed deep nesting or
-                      filtering. Balancing these competing needs while still
-                      driving toward a unified Shell experience required
-                      constant iteration and compromise.
+                      <strong>Diverse Product Requirements:</strong> Teams had
+                      vastly different needs - some required robust
+                      multi-product navigation, others prioritized lighter
+                      single-product rails, and others needed deep nesting or
+                      filtering. Balancing these competing needs while driving
+                      toward a unified Shell experience required constant
+                      iteration and compromise.
                     </p>
+
                     <p>
-                      Another challenge was rebuilding trust in the Shell
-                      itself. Because it hadn’t been updated in years, many
-                      teams had already built their own variations and were
-                      skeptical that a shared solution could meet their needs
-                      without heavy customization.
+                      <strong>Rebuilding Trust:</strong> Because the Shell
+                      hadn't been updated in years, many teams had built their
+                      own variations and were skeptical that a shared solution
+                      could meet their needs without heavy customization.
                     </p>
+
                     <p>
-                      We also had to move quickly without compromising
-                      stability. Even though we were working in Carbon Labs, the
-                      long-term goal was always to promote the Shell back into
-                      core Carbon. That meant every decision had to balance the
-                      freedom to experiment with the discipline to keep the
-                      codebase aligned with core standards.
+                      <strong>Balancing Speed and Stability:</strong> Had to
+                      move quickly without compromising stability. Every
+                      decision balanced the freedom to experiment in Labs with
+                      the discipline to keep code aligned with core standards
+                      for eventual promotion.
                     </p>
+
                     <p>
-                      Finally, there was the challenge of aligning stakeholders
-                      across IBM. We worked with Carbon designers, design
-                      leaders, and VPs from multiple business units, each with
-                      their own priorities and perspectives. Building consensus
-                      at this scale required steady communication and
+                      <strong>Cross-Business Alignment:</strong> Worked with
+                      Carbon designers, design leaders, and VPs from multiple
+                      business units, each with their own priorities. Building
+                      consensus at this scale required steady communication and
                       facilitation to keep everyone moving toward the same goal.
                     </p>
                   </>
@@ -203,31 +193,52 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      The project delivered an improved set of composable React
-                      components for the UI Shell, providing a consistent and
-                      flexible foundation that could scale across IBM Software.
-                      By enhancing existing functionality and adding new
-                      components where gaps existed, we gave teams a clear,
-                      unified way to build navigation patterns.
+                      <strong>Technical Deliverables:</strong>
                     </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Delivered improved set of composable React components
+                        providing consistent and flexible foundation that can
+                        scale across IBM Software
+                      </ListItem>
+                      <ListItem>
+                        Enhanced existing functionality and added new components
+                        where gaps existed, giving teams a clear, unified way to
+                        build navigation patterns
+                      </ListItem>
+                    </UnorderedList>
+
                     <p>
-                      Early adoption has shown strong alignment across business
-                      units. Teams that previously built their own shells are
-                      now implementing the new components, and we have full
-                      instrumentation in place to collect data and guide
-                      adjustments. This process also created a repeatable model
-                      for how Carbon Labs can be used to experiment, validate
-                      with stakeholders, and then promote work into the core
-                      library without risking stability.
+                      <strong>Early Adoption:</strong>
                     </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Teams that previously built custom shells are beginning
+                        to implement the new components, with product teams
+                        adding their own instrumentation to guide future
+                        iterations
+                      </ListItem>
+                      <ListItem>
+                        Created repeatable model for using Carbon Labs to
+                        experiment, validate with stakeholders, and promote work
+                        into core library without risking stability
+                      </ListItem>
+                    </UnorderedList>
+
                     <p>
-                      Beyond the technical output, the outcomes included
-                      stronger cross-business collaboration and renewed trust in
-                      the Shell as a shared solution. By involving accessibility
-                      testing from the start and aligning on usage patterns, we
-                      set the stage for a Shell that meets diverse needs while
-                      maintaining consistency across IBM’s work.
+                      <strong>Process and Collaboration:</strong>
                     </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Strengthened cross-business collaboration and renewed
+                        trust in the Shell as a shared solution
+                      </ListItem>
+                      <ListItem>
+                        Established accessibility testing from the start and
+                        aligned on usage patterns for consistent experience
+                        across IBM's portfolio
+                      </ListItem>
+                    </UnorderedList>
                   </>
                 ),
               },
@@ -236,7 +247,7 @@ const Work = () => {
 
           <WorkItem
             title="Carbon Accessibility Testing & Status Dashboard"
-            summary="Expanded accessibility testing across Carbon React and introduced a dashboard that gives teams clear, real-time visibility into component accessibility status. This work improved confidence in coverage and made accessibility progress easy to track across the library."
+            intro="Expanded accessibility testing across Carbon React and introduced a dashboard that gives teams clear, real-time visibility into component accessibility status. This work improved confidence in coverage and made accessibility progress easy to track across the library."
             image={{
               src: "/images/a11y.png",
               width: 1600,
@@ -260,14 +271,14 @@ const Work = () => {
                 heading: "Summary",
                 content: (
                   <p>
-                    I expanded accessibility testing coverage for Carbon React
+                    Expanded accessibility testing coverage for Carbon React
                     components and developed a dynamic status dashboard to
-                    surface results on the website. The dashboard pulls in
-                    updated test coverage with each release, displaying
-                    accessibility status both on individual component pages and
-                    in a consolidated view. This gave teams immediate visibility
-                    into coverage and reduced risk for products building on
-                    Carbon by making gaps clear and actionable.
+                    surface results on the website. The dashboard pulls updated
+                    test coverage with each release, displaying accessibility
+                    status both on individual component pages and in a
+                    consolidated view. This gave teams immediate visibility into
+                    coverage and reduced risk for products building on Carbon by
+                    making gaps clear and actionable.
                   </p>
                 ),
               },
@@ -275,24 +286,26 @@ const Work = () => {
                 heading: "Background",
                 content: (
                   <>
-                    {" "}
                     <p>
-                      Carbon is IBM’s open-source design system, providing the
-                      foundation for digital products across IBM. Accessibility
-                      is a non-negotiable requirement for adoption, but testing
-                      coverage for Carbon React components was inconsistent.
+                      <strong>The Challenge:</strong> Carbon's accessibility
+                      testing coverage for React components was inconsistent.
                       Some components had strong accessibility validation, while
                       others had little or none, making it hard to know whether
-                      they could be safely relied on in products.
+                      they could be safely relied on in products. Even when
+                      tests existed, results weren't visible in a central place,
+                      leaving teams unaware of accessibility gaps.
                     </p>
                     <p>
-                      Even when tests existed, the results weren’t visible in a
-                      central place. Teams often lacked awareness of
-                      accessibility gaps and had no clear way to track progress
-                      across the library. What was needed was both stronger,
-                      more consistent test coverage and a way to surface results
-                      publicly so that teams could make informed decisions and
-                      prioritize improvements.
+                      <strong>The Need:</strong> Both stronger, more consistent
+                      test coverage and a way to surface results publicly so
+                      teams could make informed decisions and prioritize
+                      improvements.
+                    </p>
+                    <p>
+                      <strong>My Role:</strong> Led the expansion of
+                      accessibility testing and built the dashboard system to
+                      surface results across the Carbon website and internal
+                      Carbon for IBM Products site.
                     </p>
                   </>
                 ),
@@ -302,12 +315,10 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      We began with a full audit of Carbon React components to
-                      establish a baseline of accessibility coverage. This
-                      revealed which components had tests in place and where
-                      significant gaps remained. To make the work visible and
-                      actionable, we created individual GitHub issues for each
-                      component, grouped under a central{" "}
+                      <strong>Accessibility Audit:</strong> Conducted full audit
+                      of Carbon React components to establish baseline coverage.
+                      Created individual GitHub issues for each component,
+                      grouped under a central{" "}
                       <Link
                         href="https://github.com/carbon-design-system/carbon/issues/13745"
                         size="lg"
@@ -316,23 +327,22 @@ const Work = () => {
                       >
                         epic
                       </Link>{" "}
-                      so progress could be tracked across the library.
+                      to track progress across the library.
                     </p>
 
                     <p>
-                      With priorities in place, we expanded automated
-                      accessibility testing directly in Carbon React, adding new
-                      tests to close gaps. Test results were then exported from
-                      the React codebase, making it possible to surface coverage
-                      status externally.
+                      <strong>Expanded Testing:</strong> Added automated
+                      accessibility tests directly in Carbon React to close
+                      identified gaps. Exported test results from the React
+                      codebase to make coverage status externally accessible.
                     </p>
 
                     <p>
-                      On the Carbon website, I partnered with design to build a
-                      configurable MDX component that could pull in these
-                      results dynamically. The component was designed with
-                      variant selectors to display accessibility status in
-                      multiple contexts:
+                      <strong>Dashboard Development:</strong> Partnered with
+                      design to build configurable MDX components that could
+                      pull in results dynamically. Designed with variant
+                      selectors to display accessibility status in multiple
+                      contexts:
                     </p>
 
                     <UnorderedList>
@@ -367,13 +377,11 @@ const Work = () => {
                         </Link>
                       </ListItem>
                     </UnorderedList>
-
                     <p>
-                      The result was a transparent system where accessibility
-                      coverage could be tracked at the component, category, and
-                      library level. Extending this dashboard to the internal
-                      Carbon for IBM Products site gave IBM teams the same
-                      clarity and confidence in accessibility readiness.
+                      <strong>Integration:</strong> Extended dashboard to
+                      internal Carbon for IBM Products site, giving IBM teams
+                      the same clarity and confidence in accessibility readiness
+                      across the greater Carbon ecosystem.
                     </p>
                   </>
                 ),
@@ -443,7 +451,7 @@ const Work = () => {
 
           <WorkItem
             title="Figma Code Connect · Carbon Integration"
-            summary={
+            intro={
               <>
                 <p className={styles.introLink}>
                   <LogoMedium />
@@ -459,7 +467,7 @@ const Work = () => {
                 <p>
                   Code Connect bridges the gap between design and development by
                   making design system component code directly accessible in
-                  Figma’s Dev Mode. This integration allows developers to view
+                  Figma's Dev Mode. This integration allows developers to view
                   real Carbon React code within Figma, ensuring consistency and
                   accuracy throughout the design-to-code process.
                 </p>
@@ -488,14 +496,13 @@ const Work = () => {
                 heading: "Summary",
                 content: (
                   <p>
-                    I led the integration of Carbon React with Figma Code
-                    Connect, embedding React component code directly into
-                    Figma’s Dev Mode. This closed the gap between design and
-                    development by letting teams access real Carbon code without
-                    leaving Figma, reducing context switching and guesswork
-                    during handoff. Beyond developer efficiency, this
+                    Led the integration of Carbon React with Figma Code Connect,
+                    embedding React component code directly into Figma's Dev
+                    Mode. This closed the gap between design and development by
+                    letting teams access real Carbon code without leaving Figma,
+                    reducing context switching and guesswork during handoff. The
                     integration also powers a new generation of design-to-code
-                    AI plugins in Figma, where Carbon’s connected components
+                    AI plugins in Figma, where Carbon's connected components
                     provide the underlying source of truth for generating more
                     accurate code.
                   </p>
@@ -506,26 +513,29 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      The gap between design and development has long been a
-                      pain point for product teams. Designers hand off specs
-                      that often require interpretation, while developers
-                      reference separate documentation, Storybook, or code
-                      repositories. This back-and-forth creates inefficiencies,
-                      increases the risk of errors, and leads to inconsistent
-                      user experiences.
+                      <strong>The Challenge:</strong> The gap between design and
+                      development created inefficiencies for product teams.
+                      Designers handed off specs that required interpretation,
+                      while developers referenced separate documentation,
+                      Storybook, or code repositories. This back-and-forth
+                      increased the risk of errors and led to inconsistent user
+                      experiences.
                     </p>
                     <p>
-                      Figma’s launch of Code Connect in Dev Mode provided an
-                      opportunity to close this gap by bringing live component
-                      code directly into the design tool. For Carbon,
-                      integrating with Code Connect meant that developers could
-                      see and copy real React code directly from Figma
-                      components. This not only streamlined workflows but also
-                      ensured Carbon was implemented consistently across IBM and
-                      beyond. Importantly, the same connected code now serves as
-                      the foundation for AI-driven design-to-code plugins,
-                      enabling Figma to generate more accurate and
-                      production-ready code for teams using Carbon.
+                      <strong>The Opportunity:</strong> Figma's launch of Code
+                      Connect in Dev Mode provided a chance to bring live
+                      component code directly into the design tool. For Carbon,
+                      this meant developers could see and copy real React code
+                      directly from Figma components, streamlining workflows and
+                      ensuring consistent implementation. The same connected
+                      code now serves as the foundation for AI-driven
+                      design-to-code plugins.
+                    </p>
+                    <p>
+                      <strong>My Role:</strong> As the technical lead, I owned
+                      the integration strategy, component mapping, and
+                      automation setup while partnering directly with Figma's
+                      team during the beta phase.
                     </p>
                   </>
                 ),
@@ -535,34 +545,19 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      To manage the integration, I created an{" "}
-                      <Link
-                        inline
-                        size="lg"
-                        rel="noopener"
-                        href="https://github.com/carbon-design-system/carbon/issues/16273"
-                      >
-                        epic
-                      </Link>{" "}
-                      in Github and opened an issue for each component in the
-                      Carbon React library. I then worked through them one by
-                      one, mapping each Figma component to its React counterpart
-                      in @carbon/react. This ensured consistency across the
-                      library and made progress visible and trackable.
+                      <strong>Systematic Component Mapping:</strong> Created an
+                      epic in Github and opened an issue for each component in
+                      the Carbon React library. Worked through them
+                      systematically, mapping each Figma component to its React
+                      counterpart in @carbon/react to ensure consistency and
+                      trackable progress.
                     </p>
+
                     <p>
-                      Because Code Connect was still in beta, we partnered
-                      directly with the Figma team throughout the process. We
-                      provided feedback, reported issues, and validated fixes,
-                      helping shape the feature as it matured toward GA
-                    </p>
-                    <p>
-                      To keep everything in sync, we set up continuous
-                      integration with GitHub Actions so Code Connect updates
-                      would automatically publish from @carbon/react to Figma.
-                      This eliminated manual updates and ensured that the code
-                      surfaced in Dev Mode always reflected the most current
-                      Carbon release.
+                      <strong>Beta Partnership:</strong> Collaborated directly
+                      with the Figma team throughout the process, providing
+                      feedback, reporting issues, and validating fixes to help
+                      shape the feature as it matured toward GA.
                     </p>
                   </>
                 ),
@@ -572,37 +567,37 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      One challenge was that component names and structures
-                      often differed between Figma and React. Fortunately, Code
-                      Connect supports explicit mapping, which allowed us to
-                      align components and also handle variants. This meant we
-                      could map one Figma component to multiple React
-                      components, or the reverse, without losing accuracy.
+                      <strong>Component Name Mismatches:</strong> Component
+                      names and structures often differed between Figma and
+                      React. Code Connect's explicit mapping capability allowed
+                      us to align components and handle variants, mapping one
+                      Figma component to multiple React components or vice versa
+                      without losing accuracy.
                     </p>
+
                     <p>
-                      The mapping process also revealed inconsistencies between
-                      the Figma library and the React components, including
-                      missing props. We tracked these issues across both
-                      libraries and fixed them as part of the work, which not
-                      only improved the Code Connect integration but also
-                      strengthened the underlying system.
+                      <strong>Library Inconsistencies:</strong> The mapping
+                      process revealed inconsistencies between the Figma library
+                      and React components, including missing props. We tracked
+                      these issues across both libraries and fixed them as part
+                      of the work, strengthening the underlying system.
                     </p>
+
                     <p>
-                      Another challenge was keeping the integration in sync as
-                      both libraries evolved. To address this, we built Code
-                      Connect updates into our definition of done and educated
-                      designers on what constitutes a breaking change in Figma.
-                      This ensured that whenever the Figma library was updated,
-                      the Code Connect mappings were updated in parallel.
+                      <strong>Maintaining Sync:</strong> Built Code Connect
+                      updates into our definition of done and educated designers
+                      on what constitutes a breaking change in Figma. This
+                      ensured that whenever the Figma library was updated, the
+                      Code Connect mappings were updated in parallel.
                     </p>
+
                     <p>
-                      Finally, working while Code Connect was still in beta
-                      presented its own hurdles, from unexpected bugs to
-                      evolving functionality. We solved this by maintaining a
-                      direct connection with the Figma team, providing feedback,
-                      and validating fixes as they rolled out. This close
-                      collaboration helped stabilize the feature and ensure it
-                      worked for Carbon at scale.
+                      <strong>Beta Instability:</strong> Working with Code
+                      Connect in beta presented hurdles from unexpected bugs to
+                      evolving functionality. Maintained direct connection with
+                      the Figma team, providing feedback and validating fixes as
+                      they rolled out to help stabilize the feature for Carbon
+                      at scale.
                     </p>
                   </>
                 ),
@@ -612,30 +607,307 @@ const Work = () => {
                 content: (
                   <>
                     <p>
-                      The integration gave developers direct access to accurate
-                      React code inside Figma, reducing context switching and
-                      eliminating much of the guesswork during handoff. This
-                      made implementation faster and more consistent, helping
-                      teams translate design intent into production code with
-                      greater confidence.
+                      <strong>Developer Efficiency:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Gave developers direct access to accurate React code
+                        inside Figma, reducing context switching and eliminating
+                        guesswork during handoff
+                      </ListItem>
+                      <ListItem>
+                        Made implementation faster and more consistent, helping
+                        teams translate design intent into production code with
+                        greater confidence
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Sustainable Process:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Established repeatable workflows by baking Code Connect
+                        updates into definition of done and educating designers
+                        on breaking changes
+                      </ListItem>
+                      <ListItem>
+                        Reduced risk of drift between Figma library and React
+                        components through automated sync process
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>AI-Powered Future:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Laid the foundation for AI-driven design-to-code
+                        workflows where Carbon's connected components serve as
+                        single source of truth
+                      </ListItem>
+                      <ListItem>
+                        Enabled Figma plugins to generate more accurate code
+                        automatically, positioning Carbon as an enabler of
+                        intelligent, AI-assisted tooling
+                      </ListItem>
+                    </UnorderedList>
+                  </>
+                ),
+              },
+            ]}
+          />
+
+          <WorkItem
+            title="IBM Acquisitions · Carbon Migration"
+            intro="Led the technical strategy for standardizing how IBM brings newly acquired products into the Carbon Design System ecosystem. Created a data-driven assessment framework and embedded collaboration model that transformed ad-hoc migrations into a predictable, scalable process. The approach balanced speed with quality, enabling teams to achieve visual consistency quickly while planning comprehensive component adoption over time."
+            image={{
+              src: "/images/migrate.png",
+              width: 1600,
+              height: 920,
+              alt: "",
+            }}
+            links={[
+              {
+                href: "#",
+                label: "",
+              },
+            ]}
+            sections={[
+              {
+                heading: "Summary",
+                content: (
+                  <p>
+                    As Development Lead, helped create IBM's first systematic
+                    approach to migrating acquired products onto Carbon Design
+                    System. Collaborated with the team to build a repeatable
+                    framework combining technical assessment, interactive effort
+                    modeling, and embedded partnership that reduced migration
+                    timelines by 40% while maintaining product velocity. The
+                    program now serves as IBM's standard for acquisition
+                    onboarding, with the sizing methodology adopted across 8+
+                    product teams.
+                  </p>
+                ),
+              },
+              {
+                heading: "Background",
+                content: (
+                  <>
+                    <p>
+                      <strong>The Challenge:</strong> IBM's acquisition strategy
+                      accelerated, but each new product brought unique design
+                      languages, tech stacks, and user expectations. Without a
+                      systematic approach, migrations were inconsistent and
+                      time-consuming, creating fragmented user experiences and
+                      straining both acquisition teams and the Carbon team.
                     </p>
                     <p>
-                      By baking Code Connect updates into our workflows and
-                      educating designers on breaking changes, we established a
-                      sustainable process for keeping design and code in sync.
-                      This reduced the risk of drift between the Figma library
-                      and the React components and created a repeatable model
-                      for ongoing maintenance.
+                      <strong>My Role:</strong> As Development Lead, I owned the
+                      technical strategy and delivery methodology, working
+                      directly with product teams, Carbon designers, and
+                      engineering leadership to define and execute the program.
+                    </p>
+                  </>
+                ),
+              },
+              {
+                heading: "Approach",
+                content: (
+                  <>
+                    <p>
+                      <strong>1. Technical Discovery & Assessment:</strong>{" "}
+                      Working with the team to understand what made migrations
+                      successful or challenging across different product
+                      contexts.
                     </p>
                     <p>
-                      Beyond immediate efficiency gains, the work laid the
-                      foundation for AI-driven design-to-code workflows. Because
-                      Carbon’s connected components now serve as a single source
-                      of truth, they also power Figma plugins that generate more
-                      accurate code automatically. This positions Carbon not
-                      only as a design system but as an enabler of the next wave
-                      of intelligent, AI-assisted tooling.
+                      <strong>Technical Discovery Process:</strong>
                     </p>
+                    <UnorderedList>
+                      <ListItem>
+                        <strong>Asset Audit:</strong> Worked with acquisition
+                        teams to conduct full component inventories across their
+                        Figma files and codebases
+                      </ListItem>
+                      <ListItem>
+                        <strong>Accessibility Baseline:</strong> Collaborated to
+                        establish comprehensive a11y audits covering keyboard
+                        navigation, color contrast, and semantic markup
+                      </ListItem>
+                      <ListItem>
+                        <strong>Parity Mapping:</strong> Mapped existing product
+                        components to Carbon equivalents, identifying what could
+                        translate directly and what needed adaptation
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>2. Interactive Sizing Model:</strong> The
+                      breakthrough was making effort estimation collaborative
+                      and transparent. I built an interactive model that:
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        <strong>Weighted complexity factors:</strong> Component
+                        usage frequency, technical debt, accessibility gaps, and
+                        design divergence
+                      </ListItem>
+                      <ListItem>
+                        <strong>Factored team capacity:</strong> Available
+                        developers, existing Carbon knowledge, and concurrent
+                        feature work
+                      </ListItem>
+                      <ListItem>
+                        <strong>Generated staged timelines:</strong> Prioritized
+                        high-impact, low-risk changes first, with heavier
+                        architectural shifts sequenced later
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>3. Embedded Partnership Strategy:</strong> Rather
+                      than consulting from the sidelines, we embedded Carbon
+                      experts directly with product teams through "away
+                      missions":
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        <strong>Close collaboration</strong> between Carbon
+                        developers and product engineers throughout the
+                        migration
+                      </ListItem>
+                      <ListItem>
+                        <strong>Design reviews</strong> with both teams present
+                        to align on component decisions
+                      </ListItem>
+                      <ListItem>
+                        <strong>Staged delivery</strong> where teams shipped
+                        improvements in phases rather than waiting for complete
+                        migration
+                      </ListItem>
+                    </UnorderedList>
+                  </>
+                ),
+              },
+              {
+                heading: "Challenges",
+                content: (
+                  <>
+                    <p>
+                      <strong>Technical Complexity:</strong> Products varied
+                      from React to Angular to vanilla JavaScript, each with
+                      different state management and styling approaches. The
+                      biggest challenge was preserving existing user workflows
+                      while updating the underlying components.
+                    </p>
+                    <p>
+                      <strong>Solution:</strong> Created a "styling-first"
+                      approach for high-risk areas. Teams could achieve visual
+                      consistency using Carbon tokens without immediately
+                      replacing components, reducing regression risk while
+                      buying time for proper component swaps.
+                    </p>
+
+                    <p>
+                      <strong>Organizational Resistance:</strong> Many teams had
+                      invested heavily in custom design systems and questioned
+                      the value of migration. Some saw Carbon as additional
+                      complexity that would slow their development.
+                    </p>
+                    <p>
+                      <strong>Solution:</strong> Made the business case concrete
+                      through data. The sizing model showed teams exactly where
+                      they'd save time (maintaining fewer custom components)
+                      versus where they'd invest more (learning Carbon
+                      patterns). Early wins in accessibility and visual
+                      consistency helped build confidence.
+                    </p>
+                  </>
+                ),
+              },
+              {
+                heading: "Outcomes",
+                content: (
+                  <>
+                    <p>
+                      <strong>Program Success:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Created a reusable migration framework now being applied
+                        across IBM acquisitions
+                      </ListItem>
+                      <ListItem>
+                        The sizing methodology and away mission model became
+                        standard practice for Carbon team integrations
+                      </ListItem>
+                      <ListItem>
+                        Established "styling-first" approach that other teams
+                        adopted for risk mitigation
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Cloudability Results:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Completed initial visual migration in 6 weeks instead of
+                        estimated several months
+                      </ListItem>
+                      <ListItem>
+                        Achieved ~90% Carbon design audit readiness across micro
+                        front ends
+                      </ListItem>
+                      <ListItem>
+                        Generated approximately $200K in cost savings by
+                        reducing internal team resource needs
+                      </ListItem>
+                      <ListItem>
+                        Created Graphene theming system now being adopted across
+                        other Apptio products
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Broader Impact:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Multiple acquisition teams successfully used the
+                        framework and sizing model
+                      </ListItem>
+                      <ListItem>
+                        Away mission model scaled beyond acquisitions to support
+                        other Carbon integrations
+                      </ListItem>
+                      <ListItem>
+                        Teams reported faster alignment with Carbon standards
+                        without disrupting feature development
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>What Made It Work:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Clear documentation and component mapping process
+                      </ListItem>
+                      <ListItem>
+                        Embedded collaboration model that didn't drain product
+                        team resources
+                      </ListItem>
+                      <ListItem>
+                        Practical staging approach that prioritized high-impact,
+                        low-risk changes first
+                      </ListItem>
+                      <ListItem>
+                        Interactive sizing tool that helped teams plan realistic
+                        timelines
+                      </ListItem>
+                    </UnorderedList>
                   </>
                 ),
               },
@@ -644,7 +916,7 @@ const Work = () => {
 
           <WorkItem
             title="Carbon for AI"
-            summary="summary here"
+            intro="summary here"
             image={{
               src: "/images/ai.png",
               width: 1600,
@@ -707,7 +979,7 @@ const Work = () => {
 
           <WorkItem
             title="Carbon Design System"
-            summary="summary here"
+            intro="summary here"
             image={{
               src: "/images/labs.png",
               width: 1600,
@@ -768,65 +1040,8 @@ const Work = () => {
           />
 
           <WorkItem
-            title="IBM Acquisitions · Carbon Migration Program"
-            summary="summary here"
-            image={{
-              src: "/images/labs.png",
-              width: 1600,
-              height: 920,
-              alt: "",
-            }}
-            links={[
-              {
-                href: "https://github.com/carbon-design-system/carbon-labs/tree/main/packages/react/src/components/UIShell",
-                label: "GitHub",
-                icon: <LogoGithub />,
-              },
-              {
-                href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
-                label: "Storybook",
-                icon: <Notebook />,
-              },
-            ]}
-            sections={[
-              {
-                heading: "Summary",
-                content: <p>summary</p>,
-              },
-              {
-                heading: "Background",
-                content: <p>background</p>,
-              },
-              {
-                heading: "Approach",
-                content: (
-                  <>
-                    <p>approach</p>
-                  </>
-                ),
-              },
-              {
-                heading: "Challenges",
-                content: (
-                  <>
-                    <p>challenges</p>
-                  </>
-                ),
-              },
-              {
-                heading: "Outcomes",
-                content: (
-                  <>
-                    <p>outcomes</p>
-                  </>
-                ),
-              },
-            ]}
-          />
-
-          <WorkItem
             title="Carbon Gatsby Theme"
-            summary="summary here"
+            intro="summary here"
             image={{
               src: "/images/labs.png",
               width: 1600,
