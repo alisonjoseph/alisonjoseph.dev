@@ -453,6 +453,13 @@ const Work = () => {
             title="Figma Code Connect · Carbon Integration"
             intro={
               <>
+                <p>
+                  Code Connect bridges the gap between design and development by
+                  making design system component code directly accessible in
+                  Figma's Dev Mode. This integration allows developers to view
+                  real Carbon React code within Figma, ensuring consistency and
+                  accuracy throughout the design-to-code process.
+                </p>{" "}
                 <p className={styles.introLink}>
                   <LogoMedium />
                   <Link
@@ -463,13 +470,6 @@ const Work = () => {
                     Carbon and Figma Code Connect: Redefining the Design-to-Code
                     Experience
                   </Link>
-                </p>
-                <p>
-                  Code Connect bridges the gap between design and development by
-                  making design system component code directly accessible in
-                  Figma's Dev Mode. This integration allows developers to view
-                  real Carbon React code within Figma, ensuring consistency and
-                  accuracy throughout the design-to-code process.
                 </p>
               </>
             }

@@ -21,20 +21,6 @@
   }
 }
 
-.grid h2 {
-  color: $text-primary;
-}
-
-.grid img {
-  width: 50%;
-  height: auto;
-  max-width: 100%;
-
-  @include breakpoint("md") {
-    width: 100%;
-  }
-}
-
 .introLink {
   display: flex;
   align-items: top;
