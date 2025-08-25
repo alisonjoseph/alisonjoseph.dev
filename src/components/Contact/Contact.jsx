@@ -9,11 +9,7 @@ const Contact = () => {
       <Column sm={4} md={6} lg={12}>
         <p>
           Let’s connect! I’m based in the <em>Austin, TX</em> area, you can
-          reach me at{" "}
-          <Link inline size="lg" href="mailto:alisonejoseph@gmail.com">
-            alisonejoseph@gmail.com
-          </Link>{" "}
-          or find me on{" "}
+          reach me on{" "}
           <Link
             inline
             size="lg"
@@ -22,7 +18,7 @@ const Contact = () => {
           >
             LinkedIn
           </Link>{" "}
-          and{" "}
+          or find me on{" "}
           <Link
             inline
             size="lg"
