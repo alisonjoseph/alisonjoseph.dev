@@ -8,6 +8,7 @@ import {
   Wikis,
   PresentationFile,
   Microphone,
+  LogoNpm,
 } from "@carbon/icons-react";
 
 const LogoMedium = ({ size = 16, ...props }) => (
@@ -916,7 +917,7 @@ const Work = () => {
 
           <WorkItem
             title="Carbon for AI"
-            intro="summary here"
+            intro="Carbon for AI is an extension of the Carbon design system that gives AI instances a visually distinct identity through light-inspired effects like gradients, glows, and brightness. Built on Carbon's core principles, it uses visual styling to identify AI-generated content while providing transparency and explainability pathways. The system includes new color tokens, AI variants of existing components, and specialized components like the AI label to ensure consistent AI identification across IBM's product ecosystem."
             image={{
               src: "/images/ai.png",
               width: 1600,
@@ -925,98 +926,154 @@ const Work = () => {
             }}
             links={[
               {
-                href: "https://github.com/carbon-design-system/carbon",
-                label: "GitHub",
-                icon: <LogoGithub />,
-              },
-              {
-                href: "https://react.carbondesignsystem.com/?path=/docs/components-ailabel--overview",
-                label: "Storybook",
-                icon: <Notebook />,
-              },
-
-              {
                 href: "https://carbondesignsystem.com/guidelines/carbon-for-ai/",
                 label: "Guidelines",
                 icon: <Wikis />,
               },
-            ]}
-            sections={[
               {
-                heading: "Summary",
-                content: <p>summary</p>,
-              },
-              {
-                heading: "Background",
-                content: <p>background</p>,
-              },
-              {
-                heading: "Approach",
-                content: (
-                  <>
-                    <p>approach</p>
-                  </>
-                ),
-              },
-              {
-                heading: "Challenges",
-                content: (
-                  <>
-                    <p>challenges</p>
-                  </>
-                ),
-              },
-              {
-                heading: "Outcomes",
-                content: (
-                  <>
-                    <p>outcomes</p>
-                  </>
-                ),
-              },
-            ]}
-          />
-
-          <WorkItem
-            title="Carbon Design System"
-            intro="summary here"
-            image={{
-              src: "/images/carbon.png",
-              width: 1600,
-              height: 920,
-              alt: "",
-            }}
-            links={[
-              {
-                href: "https://github.com/carbon-design-system/carbon-labs/tree/main/packages/react/src/components/UIShell",
+                href: "https://github.com/carbon-design-system/carbon/tree/main/packages/themes",
                 label: "GitHub",
                 icon: <LogoGithub />,
               },
               {
-                href: "https://labs.carbondesignsystem.com/?path=/story/react_components-uishell--demo",
+                href: "https://react.carbondesignsystem.com/?path=/story/experimental-ai-label-ailabel--default",
                 label: "Storybook",
                 icon: <Notebook />,
-              },
-              {
-                href: "https://www.knapsack.cloud/patterns",
-                label: "Speaker",
-                icon: <Microphone />,
               },
             ]}
             sections={[
               {
                 heading: "Summary",
-                content: <p>summary</p>,
+                content: (
+                  <p>
+                    Provided technical oversight and review for Carbon for AI, a
+                    comprehensive extension to IBM's design system that uses
+                    light-inspired visual effects to identify AI-generated
+                    content. Managed the development process and provided
+                    architectural guidance on how gradient systems and new color
+                    tokens would integrate with existing Carbon infrastructure.
+                    Ensured the implementation maintained design system
+                    consistency and accessibility standards throughout the rapid
+                    development cycle that delivered full component coverage in
+                    just a few months.
+                  </p>
+                ),
               },
               {
                 heading: "Background",
-                content: <p>background</p>,
+                content: (
+                  <>
+                    <p>
+                      <strong>The Challenge:</strong> As AI became central to
+                      IBM's product strategy, users needed clear ways to
+                      identify AI-generated content across all IBM software.
+                      Without visual consistency, AI instances appeared
+                      differently across products, creating confusion and
+                      reducing trust. IBM needed a systematic approach that
+                      would work across hundreds of components while maintaining
+                      accessibility and brand consistency.
+                    </p>
+                    <p>
+                      <strong>The Opportunity:</strong> Create an extension to
+                      Carbon that used "light as a metaphor to illuminate
+                      AI-generated content" while building transparency and
+                      explainability into the design system itself. This meant
+                      developing new visual language that was distinct yet
+                      harmonious with existing Carbon principles.
+                    </p>
+                    <p>
+                      <strong>My Role:</strong> I served in a review and
+                      management capacity, overseeing the technical
+                      implementation process and providing guidance on
+                      architecture decisions. My involvement focused on ensuring
+                      the AI styling integrated properly with existing Carbon
+                      infrastructure and met our accessibility and consistency
+                      standards.
+                    </p>
+                  </>
+                ),
               },
               {
                 heading: "Approach",
                 content: (
                   <>
-                    <p>approach</p>
+                    <p>
+                      <strong>Design-Development Collaboration:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Dev partnered closely with design through early
+                        prototyping phase to understand how gradient systems
+                        would work across multiple component types and themes
+                      </ListItem>
+                      <ListItem>
+                        Carbon devs built rapid prototypes to test visual
+                        concepts in real component contexts, validating design
+                        decisions against technical constraints
+                      </ListItem>
+                      <ListItem>
+                        Established feedback loops between design exploration
+                        and technical feasibility to ensure concepts could scale
+                        across the entire component library
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Token Architecture & Visual System:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Developed new suite of AI color tokens that integrated
+                        seamlessly with existing Carbon themes without requiring
+                        separate theme packages
+                      </ListItem>
+                      <ListItem>
+                        Implemented gradient and glow effects using CSS custom
+                        properties to ensure consistent light-inspired styling
+                        across components
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Component Implementation Strategy:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Built AI variants for core Carbon components using
+                        mix-in approach, allowing components to toggle between
+                        standard and AI styling without code duplication
+                      </ListItem>
+                      <ListItem>
+                        Integrated AI label component as consistent indicator
+                        across all AI-enhanced components, providing pathway to
+                        explainability through popover system
+                      </ListItem>
+                      <ListItem>
+                        Implemented revert functionality that allows users to
+                        toggle between AI-generated and manually edited content
+                        while maintaining state
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Accessibility & Standards:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Ensured all AI styling met Carbon's accessibility
+                        standards through contrast testing and screen reader
+                        validation
+                      </ListItem>
+                      <ListItem>
+                        Limited light spread and glow effects to maintain
+                        readability while preserving visual distinction
+                      </ListItem>
+                      <ListItem>
+                        Built AI transparency principles directly into component
+                        architecture, making ethical AI practices automatic
+                        rather than optional
+                      </ListItem>
+                    </UnorderedList>
                   </>
                 ),
               },
@@ -1024,7 +1081,50 @@ const Work = () => {
                 heading: "Challenges",
                 content: (
                   <>
-                    <p>challenges</p>
+                    <p>
+                      <strong>Visual Complexity vs. Performance:</strong>{" "}
+                      Implementing gradients, glows, and light effects across
+                      dozens of components while maintaining fast render
+                      performance required careful CSS optimization. Had to
+                      balance visual impact with technical constraints,
+                      especially for complex components like data tables with
+                      hundreds of cells.
+                    </p>
+
+                    <p>
+                      <strong>Cross-Component Consistency:</strong> Each
+                      component type presented unique challenges for applying AI
+                      styling - from form inputs to modals to data tables.
+                      Ensuring the light-inspired effects felt cohesive across
+                      such different interaction patterns required extensive
+                      iteration and testing.
+                    </p>
+
+                    <p>
+                      <strong>Accessibility with New Visual Language:</strong>{" "}
+                      Creating visually striking effects that remained
+                      accessible was challenging. The gradient and glow effects
+                      needed to enhance rather than interfere with contrast
+                      ratios, keyboard navigation, and screen reader
+                      accessibility.
+                    </p>
+
+                    <p>
+                      <strong>Theme Integration:</strong> AI styling needed to
+                      work across Carbon's light, dark, and high-contrast themes
+                      without breaking existing implementations. This required
+                      careful token architecture that extended rather than
+                      replaced existing color systems.
+                    </p>
+
+                    <p>
+                      <strong>Rapid Timeline with Quality Standards:</strong>{" "}
+                      Delivering full component coverage in just a few months
+                      while maintaining Carbon's quality and accessibility
+                      standards required efficient prototyping workflows and
+                      close design-development coordination throughout the
+                      process.
+                    </p>
                   </>
                 ),
               },
@@ -1032,7 +1132,88 @@ const Work = () => {
                 heading: "Outcomes",
                 content: (
                   <>
-                    <p>outcomes</p>
+                    <p>
+                      <strong>Comprehensive Component Coverage:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Delivered AI variants for all core Carbon components
+                        including forms, data tables, modals, and navigation
+                        elements in just a few months
+                      </ListItem>
+                      <ListItem>
+                        Created consistent AI identification system that works
+                        across React and Web Components libraries with identical
+                        visual and behavioral patterns
+                      </ListItem>
+                      <ListItem>
+                        Built reusable architecture that allows teams to easily
+                        add AI styling to custom components using established
+                        token system
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Design System Integration:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Successfully integrated AI styling into existing Carbon
+                        themes without breaking changes, allowing teams to adopt
+                        AI components incrementally
+                      </ListItem>
+                      <ListItem>
+                        Established design-to-code workflow where designers can
+                        toggle AI variants in Figma and developers can implement
+                        using the same variable system
+                      </ListItem>
+                      <ListItem>
+                        Created sustainable token architecture that maintains
+                        consistency as new AI components and patterns are added
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Accessibility:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        All AI components meet Carbon's accessibility standards
+                        with tested color contrast and screen reader
+                        compatibility
+                      </ListItem>
+                      <ListItem>
+                        Built AI transparency and explainability directly into
+                        component architecture through integrated AI label and
+                        popover system
+                      </ListItem>
+                      <ListItem>
+                        Established visual language that clearly distinguishes
+                        AI content while maintaining usability and aesthetic
+                        harmony with base Carbon components
+                      </ListItem>
+                    </UnorderedList>
+
+                    <p>
+                      <strong>Technical Foundation:</strong>
+                    </p>
+                    <UnorderedList>
+                      <ListItem>
+                        Created reusable pattern for extending design systems
+                        with specialized visual languages while maintaining
+                        consistency and accessibility
+                      </ListItem>
+                      <ListItem>
+                        Demonstrated rapid prototyping workflow that bridges
+                        design exploration with technical implementation at
+                        enterprise scale
+                      </ListItem>
+                      <ListItem>
+                        Positioned IBM as leader in ethical AI presentation
+                        through systematic approach to transparency and
+                        explainability in user interfaces
+                      </ListItem>
+                    </UnorderedList>
                   </>
                 ),
               },
@@ -1306,6 +1487,139 @@ const Work = () => {
                         improvements benefit entire ecosystem automatically
                       </ListItem>
                     </UnorderedList>
+                  </>
+                ),
+              },
+            ]}
+          />
+
+          <WorkItem
+            title="Carbon Design System"
+            intro="As one of the development leads and a core maintainer of IBM's open-source design system, I help lead technical strategy and community engagement for one of the industry's most widely adopted design systems. Carbon serves users across IBM's product ecosystem and the broader open-source community through React, Web Components, and design tools. My role spans hands-on development, team management, release coordination, and fostering a thriving contributor community."
+            image={{
+              src: "/images/carbon.png",
+              width: 1600,
+              height: 920,
+              alt: "",
+            }}
+            links={[
+              {
+                href: "https://github.com/carbon-design-system/carbon",
+                label: "GitHub",
+                icon: <LogoGithub />,
+              },
+              {
+                href: "https://carbondesignsystem.com/",
+                label: "Website",
+                icon: <Wikis />,
+              },
+              {
+                href: "https://www.npmjs.com/package/@carbon/react",
+                label: "npm",
+                icon: <LogoNpm />,
+              },
+            ]}
+            sections={[
+              {
+                heading: "Role & Scope",
+                content: (
+                  <>
+                    <p>
+                      <strong>Development Lead & Maintainer:</strong> Lead
+                      technical strategy, architecture decisions, and day-to-day
+                      development for Carbon's React library, Web Components,
+                      and supporting tooling. Manage a team of developers while
+                      contributing directly to core functionality, new
+                      components, and accessibility improvements.
+                    </p>
+                    <p>
+                      <strong>Community Leadership:</strong> Run bi-weekly
+                      office hours with the internal IBM community, monitor
+                      Slack channels for support, and facilitate collaboration
+                      between IBM teams and external contributors. Foster an
+                      inclusive environment that encourages contributions from
+                      developers across skill levels.
+                    </p>
+                    <p>
+                      <strong>Release Management:</strong> Coordinate bi-weekly
+                      releases across multiple packages, ensuring stability
+                      while delivering new features and improvements. Manage
+                      versioning strategy, backward compatibility, and migration
+                      paths for breaking changes.
+                    </p>
+                  </>
+                ),
+              },
+              {
+                heading: "Current Initiatives",
+                content: (
+                  <>
+                    <p>
+                      <strong>React & Web Components Parity:</strong>
+                      Leading efforts to ensure feature parity between Carbon's
+                      React and Web Components libraries, enabling consistent
+                      experiences regardless of framework choice. This includes
+                      architectural planning, API design, and coordination
+                      between development teams.
+                    </p>
+                    <p>
+                      <strong>Accessibility Excellence:</strong> Driving
+                      comprehensive accessibility improvements across the
+                      component library, including automated testing expansion,
+                      ARIA implementation, and keyboard navigation enhancements.
+                      Working to establish Carbon as an accessibility leader in
+                      the design system space.
+                    </p>
+                    <p>
+                      <strong>Testing & Quality:</strong> Expanding test
+                      coverage and improving testing infrastructure to ensure
+                      reliability at scale. This includes unit tests,
+                      integration tests, visual regression testing, and
+                      accessibility validation across the component library.
+                    </p>
+                    <p>
+                      <strong>Website & Documentation:</strong>
+                      Managing the Carbon website as part of sprint work,
+                      ensuring documentation stays current with component
+                      changes and provides clear guidance for both developers
+                      and designers.
+                    </p>
+                  </>
+                ),
+              },
+              {
+                heading: "Scale & Impact",
+                content: (
+                  <>
+                    <p>
+                      <strong>Open Source Reach:</strong> Carbon's GitHub
+                      organization includes 116 repositories with active
+                      community contribution. The main repository receives
+                      regular contributions from both IBM teams and external
+                      developers, fostering innovation and shared ownership.
+                    </p>
+                    <p>
+                      <strong>Enterprise Adoption:</strong> Carbon serves as the
+                      foundation for IBM's entire product portfolio, ensuring
+                      consistent user experiences across cloud, AI, and
+                      enterprise software offerings. The system scales to
+                      support thousands of developers and millions of end users.
+                    </p>
+                    <p>
+                      <strong>Community Engagement:</strong> Regular office
+                      hours sessions connect directly with developers using
+                      Carbon, providing real-time support and gathering feedback
+                      that drives roadmap decisions. Active Slack community
+                      enables ongoing collaboration and knowledge sharing.
+                    </p>
+                    <p>
+                      <strong>Technical Leadership:</strong> Balance hands-on
+                      development with strategic planning, ensuring Carbon
+                      evolves to meet changing technology needs while
+                      maintaining stability for existing implementations. Lead
+                      architectural decisions that impact the entire IBM
+                      ecosystem.
+                    </p>
                   </>
                 ),
               },
