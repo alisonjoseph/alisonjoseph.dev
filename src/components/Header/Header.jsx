@@ -65,12 +65,14 @@ const Header = () => {
                   Alison Joseph
                   <span>Design Systems Leader</span>
                 </div>
-                <HeaderNavigation aria-label="Alison Joseph">
-                  <HeaderMenuItem href="#about">About</HeaderMenuItem>
-                  <HeaderMenuItem href="#work">Work</HeaderMenuItem>
-                  <HeaderMenuItem href="#contact">Contact</HeaderMenuItem>
-                </HeaderNavigation>
-                <ThemeSwitcher />
+                <div className={styles.menuContainer}>
+                  <HeaderNavigation aria-label="Alison Joseph">
+                    <HeaderMenuItem href="#about">About</HeaderMenuItem>
+                    <HeaderMenuItem href="#work">Work</HeaderMenuItem>
+                    <HeaderMenuItem href="#contact">Contact</HeaderMenuItem>
+                  </HeaderNavigation>
+                  <ThemeSwitcher />
+                </div>
               </div>
             </Column>
           </Grid>

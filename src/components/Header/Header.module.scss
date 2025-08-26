@@ -10,7 +10,7 @@ $header-height: 300px;
 
 .header {
   position: relative;
-  z-index: 9999;
+  z-index: 1;
   margin-bottom: $nav-height;
   background: black;
   height: $header-height;
@@ -40,6 +40,10 @@ $header-height: 300px;
   @include type-style("fluid-heading-05", true);
   color: var(--color-30);
   margin-bottom: $spacing-01;
+}
+
+.menuContainer {
+  display: flex;
 }
 
 // navigation

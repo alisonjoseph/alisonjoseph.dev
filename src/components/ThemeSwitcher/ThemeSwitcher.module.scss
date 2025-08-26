@@ -1,47 +1,51 @@
 @use "@carbon/react/scss/colors" as *;
 @use "@carbon/react/scss/spacing" as *;
-@use "@carbon/react/scss/theme" as *;
 @use "@carbon/react/scss/breakpoint" as *;
 
 .container {
-  margin-top: $spacing-02;
-  display: flex;
-
-  @include breakpoint("lg") {
-    position: absolute;
-    right: 0;
+  @include breakpoint-down("md") {
+    margin-top: -$spacing-02;
   }
 }
 
-.button {
+.container svg {
+  fill: var(--color-10) !important;
+}
+
+.container :global(.cds--overflow-menu--open) svg {
+  fill: var(--color-90) !important;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.dot {
+  display: block;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  border: 1px solid transparent;
-  background: transparent;
-  width: 44px;
-  height: 44px;
-  margin-left: -12px;
+  padding-left: 16px;
+  position: relative;
 
-  &:after {
+  &:before {
+    position: absolute;
+    left: -4px;
+    margin-top: $spacing-02;
     content: "";
     display: block;
+    background: red;
     width: 0.75rem;
     height: 0.75rem;
-    margin-left: calc(22px - 0.75rem);
     border-radius: 9999px;
-    background: white;
+    border: 1px transparent;
 
-    &:focus {
-      border: 1px solid white;
+    .active & {
+      border: 1px solid black;
     }
   }
 }
 
-.active:after {
-  border: 1px solid white;
-}
-
-.teal:after {
+.teal:before {
   background-color: $teal-50;
 
   &:hover {
@@ -49,21 +53,21 @@
   }
 }
 
-.purple:after {
+.purple:before {
   background-color: $purple-50;
   &:hover {
     background-color: $purple-60;
   }
 }
 
-.magenta:after {
+.magenta:before {
   background-color: $magenta-50;
   &:hover {
     background-color: $magenta-60;
   }
 }
 
-.cyan:after {
+.cyan:before {
   background-color: $cyan-50;
   &:hover {
     background-color: $cyan-60;
