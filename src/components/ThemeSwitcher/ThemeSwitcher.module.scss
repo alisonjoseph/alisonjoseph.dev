@@ -1,4 +1,5 @@
 @use "@carbon/react/scss/colors" as *;
+@use "@carbon/react/scss/theme" as *;
 @use "@carbon/react/scss/spacing" as *;
 @use "@carbon/react/scss/breakpoint" as *;
 
@@ -8,8 +9,16 @@
   }
 }
 
+.div :global(.cds--overflow-menu-options) {
+  border: 2px solid red;
+}
+
 .container svg {
   fill: var(--color-10) !important;
+
+  &:hover {
+    fill: white !important;
+  }
 }
 
 .container :global(.cds--overflow-menu--open) svg {
@@ -17,7 +26,7 @@
 }
 
 .active {
-  font-weight: bold;
+  background: $background-selected;
 }
 
 .dot {

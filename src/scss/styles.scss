@@ -159,4 +159,12 @@ section {
   &:hover {
     box-shadow: none;
   }
+
+  &--open {
+    box-shadow: $spacing-02 $spacing-02 0 0 var(--color-20) !important;
+  }
+}
+
+.cds--overflow-menu-options {
+  box-shadow: $spacing-02 $spacing-02 0 0 var(--color-20);
 }
