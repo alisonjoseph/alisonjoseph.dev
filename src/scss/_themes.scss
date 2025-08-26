@@ -1,0 +1,63 @@
+@use "@carbon/react/scss/colors" as *;
+
+// Default "teal" theme
+$theme-teal: (
+  color-10: $teal-10,
+  color-20: $teal-20,
+  color-30: $teal-30,
+  color-40: $teal-40,
+  color-50: $teal-50,
+  color-60: $teal-60,
+  color-70: $teal-70,
+  color-80: $teal-80,
+  color-90: $teal-90,
+  color-100: $teal-100,
+);
+
+// Alternative "purple" theme
+$theme-purple: (
+  color-10: $purple-10,
+  color-20: $purple-20,
+  color-30: $purple-30,
+  color-40: $purple-40,
+  color-50: $purple-50,
+  color-60: $purple-60,
+  color-70: $purple-70,
+  color-80: $purple-80,
+  color-90: $purple-90,
+  color-100: $purple-100,
+);
+
+// Alternative "magenta" theme
+$theme-magenta: (
+  color-10: $magenta-10,
+  color-20: $magenta-20,
+  color-30: $magenta-30,
+  color-40: $magenta-40,
+  color-50: $magenta-50,
+  color-60: $magenta-60,
+  color-70: $magenta-70,
+  color-80: $magenta-80,
+  color-90: $magenta-90,
+  color-100: $magenta-100,
+);
+
+// New "cyan" theme
+$theme-cyan: (
+  color-10: $cyan-10,
+  color-20: $cyan-20,
+  color-30: $cyan-30,
+  color-40: $cyan-40,
+  color-50: $cyan-50,
+  color-60: $cyan-60,
+  color-70: $cyan-70,
+  color-80: $cyan-80,
+  color-90: $cyan-90,
+  color-100: $cyan-100,
+);
+
+@mixin themify($theme-map) {
+  @each $key, $value in $theme-map {
+    --#{$key}: #{$value};
+  }
+}

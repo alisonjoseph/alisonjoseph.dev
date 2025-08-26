@@ -7,6 +7,7 @@ import {
   Grid,
   Column,
 } from "@carbon/react";
+import ThemeSwitcher from "../ThemeSwitcher";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -61,13 +62,15 @@ const Header = () => {
                     showNameInNav ? styles.navNameVisible : ""
                   }`}
                 >
-                  Alison Joseph <span>Design Systems Leader</span>
+                  Alison Joseph
+                  <span>Design Systems Leader</span>
                 </div>
                 <HeaderNavigation aria-label="Alison Joseph">
                   <HeaderMenuItem href="#about">About</HeaderMenuItem>
                   <HeaderMenuItem href="#work">Work</HeaderMenuItem>
                   <HeaderMenuItem href="#contact">Contact</HeaderMenuItem>
                 </HeaderNavigation>
+                <ThemeSwitcher />
               </div>
             </Column>
           </Grid>

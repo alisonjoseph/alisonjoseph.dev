@@ -3,36 +3,37 @@
 @use "@carbon/react/scss/type" as *;
 @use "@carbon/react/scss/breakpoint" as *;
 @use "@carbon/react/scss/spacing" as *;
+@use "_themes.scss" as themes;
 
-//overriding theme tokens and adding a custom token
+// This overrides existing Carbon tokens and adds your custom tokens.
+// This is a great practice, but to make it dynamic, we'll use CSS variables.
+// The hardcoded values here will be replaced.
 @use "@carbon/react/scss/theme" with (
   $theme: (
-    // redefine existing tokens to new values to teal
-    focus: $teal-60,
-    interactive: $teal-60,
-    icon-interactive: $teal-60,
-    link-primary: $teal-60,
-    link-primary-hover: $teal-70,
-    link-secondary: $teal-70,
-    link-inverse: $teal-40,
-    link-inverse-hover: $teal-30,
-    highlight: $teal-20,
-    background-brand: $teal-20,
+    // redefine existing tokens to new values
+    focus: var(--color-60),
+    interactive: var(--color-60),
+    icon-interactive: var(--color-60),
+    link-primary: var(--color-60),
+    link-primary-hover: var(--color-70),
+    link-secondary: var(--color-70),
+    link-inverse: var(--color-40),
+    link-inverse-hover: var(--color-30),
+    highlight: var(--color-20),
+    background-brand: var(--color-20),
   )
 );
 
 @use "@carbon/react/scss/components/button/tokens" as button-tokens with (
-  $button-primary: $teal-60,
-  $button-primary-hover: $teal-70,
-  $button-primary-active: $teal-80,
-  $button-tertiary: $teal-60,
-  $button-tertiary-hover: $teal-70,
-  $button-tertiary-active: $teal-80
+  $button-primary: var(--color-60),
+  $button-primary-hover: var(--color-70),
+  $button-primary-active: var(--color-80),
+  $button-tertiary: var(--color-60),
+  $button-tertiary-hover: var(--color-70),
+  $button-tertiary-active: var(--color-80)
 );
 
 @use "@carbon/react";
-
-// @use "@carbon/react/scss/themes";
 @use "@carbon/react/scss/theme" as *;
 
 :root {
@@ -50,9 +51,27 @@ html {
 }
 
 body {
+  // Use Carbon's theme tokens for base styles
   background: $background;
   color: $text-primary;
   overflow-x: hidden;
+
+  // Apply your theme-specific custom properties
+  // The default theme (teal) is applied directly to the body
+  @include themes.themify(themes.$theme-teal);
+
+  // Use a class for each alternative theme
+  &.theme-purple {
+    @include themes.themify(themes.$theme-purple);
+  }
+
+  &.theme-magenta {
+    @include themes.themify(themes.$theme-magenta);
+  }
+
+  &.theme-cyan {
+    @include themes.themify(themes.$theme-cyan);
+  }
 }
 
 a {
@@ -64,7 +83,8 @@ a {
 }
 
 h2 {
-  color: $teal-60;
+  // Use the CSS variable instead of a hardcoded Carbon token
+  color: var(--color-60);
   font-weight: 300;
   margin: $spacing-04 0;
 }
@@ -74,18 +94,6 @@ h3 {
   font-weight: 300 !important;
   margin-bottom: $spacing-03;
   position: relative;
-
-  // &:before {
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   z-index: -1;
-  //   bottom: 0px;
-  //   left: 16px;
-  //   width: 98%;
-  //   height: 12px;
-  //   background-color: $teal-20;
-  // }
 }
 
 h4 {
@@ -115,7 +123,7 @@ li,
 p em {
   font-style: normal;
   font-weight: bold;
-  color: $teal-60;
+  color: var(--color-60);
 }
 
 .cds--css-grid {
@@ -137,9 +145,10 @@ section {
 }
 
 .cds--btn {
-  box-shadow: $spacing-02 $spacing-02 0 0 $teal-20;
+  // Use CSS variables for the box-shadow colors
+  box-shadow: $spacing-02 $spacing-02 0 0 var(--color-20);
 
   &:hover {
-    box-shadow: $spacing-02 $spacing-02 0 0 $teal-30;
+    box-shadow: $spacing-02 $spacing-02 0 0 var(--color-30);
   }
 }

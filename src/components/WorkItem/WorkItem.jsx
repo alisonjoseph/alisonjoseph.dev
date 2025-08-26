@@ -13,7 +13,7 @@ function WorkItem({ title, image, links = [], sections = [], intro }) {
         <Column sm={4} md={5} lg={10} className={styles.titleContainer}>
           <h3>{title}</h3>
 
-          {intro && <p className={styles.intro}>{intro}</p>}
+          {intro && <span className={styles.intro}>{intro}</span>}
         </Column>
         <Column sm={4} md={3} lg={6} className="{styles.imageContainer}">
           <Image
