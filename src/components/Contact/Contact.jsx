@@ -27,10 +27,6 @@ const Contact = () => {
           >
             GitHub
           </Link>
-          . You can also grab my{" "}
-          <Link inline size="lg" href="/files/alisonjoseph.pdf" rel="noopener">
-            resume here
-          </Link>
           .
         </p>
       </Column>
