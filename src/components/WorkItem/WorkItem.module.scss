@@ -14,13 +14,13 @@
     left: 50%;
     width: 100vw;
     height: 100%;
-    background: $teal-10;
+    background: var(--color-10);
     transform: translateX(-50%);
     z-index: -1;
   }
 
   &:nth-child(even)::after {
-    background: mix($teal-20, $teal-10, 22%);
+    background: color-mix(in srgb, var(--color-20) 22%, var(--color-10));
   }
 }
 
@@ -37,7 +37,7 @@
 }
 
 .item img {
-  box-shadow: $spacing-03 $spacing-03 0 0 $teal-20;
+  box-shadow: $spacing-03 $spacing-03 0 0 var(--color-20);
   margin-bottom: $spacing-02;
 
   width: 100%;

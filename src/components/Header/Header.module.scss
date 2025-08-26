@@ -38,7 +38,7 @@ $header-height: 300px;
 
 .subtitle {
   @include type-style("fluid-heading-05", true);
-  color: $teal-30;
+  color: var(--color-30);
   margin-bottom: $spacing-01;
 }
 
@@ -78,9 +78,9 @@ $header-height: 300px;
 
 .navigation :global(a.cds--header__menu-item) {
   @include type-style("heading-01");
-  padding: 0 $spacing-06;
+  padding: 0 $spacing-05;
   background: transparent;
-  color: $teal-10;
+  color: var(--color-10);
   font-weight: 300 !important;
 
   @include breakpoint("md") {
@@ -96,7 +96,7 @@ $header-height: 300px;
     transform-origin: center;
     width: 50%;
     height: 8px;
-    background-color: $teal-80;
+    background-color: var(--color-80);
     transition: transform $duration-fast-02;
     z-index: -1;
 
@@ -129,24 +129,27 @@ $header-height: 300px;
 // Name in navigation bar
 .navName {
   @include type-style("heading-02");
+
   color: white;
   opacity: 0;
   transform: translateY(-10px);
   transition: all $duration-fast-02;
   pointer-events: none;
   font-weight: bold !important;
+  white-space: nowrap;
 
   @include breakpoint("md") {
     @include type-style("heading-03");
   }
 
   span {
-    color: $teal-20;
+    color: var(--color-20);
     display: none;
     font-weight: 300 !important;
 
     @include breakpoint("lg") {
       display: inline;
+      padding-left: $spacing-02;
     }
   }
 }

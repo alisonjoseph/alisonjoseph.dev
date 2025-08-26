@@ -43,7 +43,15 @@ const Work = () => {
         <div className={styles.items}>
           <WorkItem
             title="UI Shell Improvements in Carbon Labs"
-            intro="The Carbon UI Shell was expanded and enhanced in Carbon Labs to create a consistent, unified experience across IBM Software. Building on the existing shell, the work added new React components where gaps existed and aligned diverse business needs into shared patterns."
+            intro={
+              <p>
+                The Carbon UI Shell was expanded and enhanced in Carbon Labs to
+                create a consistent, unified experience across IBM Software.
+                Building on the existing shell, the work added new React
+                components where gaps existed and aligned diverse business needs
+                into shared patterns.
+              </p>
+            }
             image={{
               src: "/images/uishell.png",
               width: 1600,
@@ -248,7 +256,15 @@ const Work = () => {
 
           <WorkItem
             title="Carbon Accessibility Testing & Status Dashboard"
-            intro="Expanded accessibility testing across Carbon React and introduced a dashboard that gives teams clear, real-time visibility into component accessibility status. This work improved confidence in coverage and made accessibility progress easy to track across the library."
+            intro={
+              <p>
+                Expanded accessibility testing across Carbon React and
+                introduced a dashboard that gives teams clear, real-time
+                visibility into component accessibility status. This work
+                improved confidence in coverage and made accessibility progress
+                easy to track across the library.
+              </p>
+            }
             image={{
               src: "/images/a11y.png",
               width: 1600,
@@ -661,7 +677,17 @@ const Work = () => {
 
           <WorkItem
             title="IBM Acquisitions · Carbon Migration"
-            intro="Led the technical strategy for standardizing how IBM brings newly acquired products into the Carbon Design System ecosystem. Created a data-driven assessment framework and embedded collaboration model that transformed ad-hoc migrations into a predictable, scalable process. The approach balanced speed with quality, enabling teams to achieve visual consistency quickly while planning comprehensive component adoption over time."
+            intro={
+              <p>
+                Led the technical strategy for standardizing how IBM brings
+                newly acquired products into the Carbon Design System ecosystem.
+                Created a data-driven assessment framework and embedded
+                collaboration model that transformed ad-hoc migrations into a
+                predictable, scalable process. The approach balanced speed with
+                quality, enabling teams to achieve visual consistency quickly
+                while planning comprehensive component adoption over time.
+              </p>
+            }
             image={{
               src: "/images/migrate.png",
               width: 1600,
@@ -917,7 +943,19 @@ const Work = () => {
 
           <WorkItem
             title="Carbon for AI"
-            intro="Carbon for AI is an extension of the Carbon design system that gives AI instances a visually distinct identity through light-inspired effects like gradients, glows, and brightness. Built on Carbon's core principles, it uses visual styling to identify AI-generated content while providing transparency and explainability pathways. The system includes new color tokens, AI variants of existing components, and specialized components like the AI label to ensure consistent AI identification across IBM's product ecosystem."
+            intro={
+              <p>
+                Carbon for AI is an extension of the Carbon design system that
+                gives AI instances a visually distinct identity through
+                light-inspired effects like gradients, glows, and brightness.
+                Built on Carbon's core principles, it uses visual styling to
+                identify AI-generated content while providing transparency and
+                explainability pathways. The system includes new color tokens,
+                AI variants of existing components, and specialized components
+                like the AI label to ensure consistent AI identification across
+                IBM's product ecosystem.
+              </p>
+            }
             image={{
               src: "/images/ai.png",
               width: 1600,
@@ -1222,7 +1260,15 @@ const Work = () => {
 
           <WorkItem
             title="Carbon Gatsby Theme"
-            intro="Led development of gatsby-theme-carbon during IBM’s migration to Carbon v10 and the new IBM Design Language. Instead of building separate sites, I partnered with design to deliver a unified Gatsby theme that now powers an ecosystem of both internal and external IBM websites."
+            intro={
+              <p>
+                Led development of gatsby-theme-carbon during IBM’s migration to
+                Carbon v10 and the new IBM Design Language. Instead of building
+                separate sites, I partnered with design to deliver a unified
+                Gatsby theme that now powers an ecosystem of both internal and
+                external IBM websites.
+              </p>
+            }
             image={{
               src: "/images/gatsby-theme.png",
               width: 1600,
@@ -1495,7 +1541,18 @@ const Work = () => {
 
           <WorkItem
             title="Carbon Design System"
-            intro="As one of the development leads and a core maintainer of IBM's open-source design system, I help lead technical strategy and community engagement for one of the industry's most widely adopted design systems. Carbon serves users across IBM's product ecosystem and the broader open-source community through React, Web Components, and design tools. My role spans hands-on development, team management, release coordination, and fostering a thriving contributor community."
+            intro={
+              <p>
+                As one of the development leads and a core maintainer of IBM's
+                open-source design system, I help lead technical strategy and
+                community engagement for one of the industry's most widely
+                adopted design systems. Carbon serves users across IBM's product
+                ecosystem and the broader open-source community through React,
+                Web Components, and design tools. My role spans hands-on
+                development, team management, release coordination, and
+                fostering a thriving contributor community.
+              </p>
+            }
             image={{
               src: "/images/carbon.png",
               width: 1600,
