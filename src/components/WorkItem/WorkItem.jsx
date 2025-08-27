@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Grid, Column, Link, Button } from "@carbon/react";
-import { ChevronDown, ChevronUp } from "@carbon/icons-react";
+import { CaretUp, CaretDown } from "@carbon/icons-react";
 import styles from "./WorkItem.module.scss";
 
 function WorkItem({ title, image, links = [], sections = [], intro }) {
@@ -48,7 +48,7 @@ function WorkItem({ title, image, links = [], sections = [], intro }) {
       <Grid>
         <Column sm={4} md={8} lg={16}>
           <Button
-            renderIcon={expanded ? ChevronUp : ChevronDown}
+            renderIcon={expanded ? CaretUp : CaretDown}
             size="sm"
             kind="primary"
             className={styles.toggle}
