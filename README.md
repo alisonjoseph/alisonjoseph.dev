@@ -2,7 +2,7 @@
 
 # alisonjoseph.dev ✨
 
-This site is a portfoliowebsite for Alison Joseph, built with [Next.js](https://nextjs.org/) and deployed on [Netlify](https://netlify.com).
+Portfolio website for Alison Joseph, built with [Next.js](https://nextjs.org/) and deployed on [Netlify](https://netlify.com).
 
 View it live at 👉 [alisonjoseph.dev](https://alisonjoseph.dev)
 
@@ -29,7 +29,7 @@ yarn build && yarn start
 ## 📁 Project Structure
 
 - `src/pages/` – Main route-based files. Homepage is in `index.js` 🏠
-- `public/` – Images and videos 🖼️
+- `public/` – Images 🖼️
 - `src/styles/` – SCSS modules for styling 🎨
 - `src/components/` – Reusable UI components 🧩
 
