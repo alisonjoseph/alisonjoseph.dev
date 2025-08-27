@@ -56,6 +56,45 @@ $theme-cyan: (
   color-100: $cyan-100,
 );
 
+$theme-blue: (
+  color-10: $blue-10,
+  color-20: $blue-20,
+  color-30: $blue-30,
+  color-40: $blue-40,
+  color-50: $blue-50,
+  color-60: $blue-60,
+  color-70: $blue-70,
+  color-80: $blue-80,
+  color-90: $blue-90,
+  color-100: $blue-100,
+);
+
+$theme-red: (
+  color-10: $red-10,
+  color-20: $red-20,
+  color-30: $red-30,
+  color-40: $red-40,
+  color-50: $red-50,
+  color-60: $red-60,
+  color-70: $red-70,
+  color-80: $red-80,
+  color-90: $red-90,
+  color-100: $red-100,
+);
+
+$theme-green: (
+  color-10: $green-10,
+  color-20: $green-20,
+  color-30: $green-30,
+  color-40: $green-40,
+  color-50: $green-50,
+  color-60: $green-60,
+  color-70: $green-70,
+  color-80: $green-80,
+  color-90: $green-90,
+  color-100: $green-100,
+);
+
 @mixin themify($theme-map) {
   @each $key, $value in $theme-map {
     --#{$key}: #{$value};

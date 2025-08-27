@@ -5,9 +5,6 @@
 @use "@carbon/react/scss/spacing" as *;
 @use "_themes.scss" as themes;
 
-// This overrides existing Carbon tokens and adds your custom tokens.
-// This is a great practice, but to make it dynamic, we'll use CSS variables.
-// The hardcoded values here will be replaced.
 @use "@carbon/react/scss/theme" with (
   $theme: (
     // redefine existing tokens to new values
@@ -51,13 +48,10 @@ html {
 }
 
 body {
-  // Use Carbon's theme tokens for base styles
   background: $background;
   color: $text-primary;
   overflow-x: hidden;
 
-  // Apply your theme-specific custom properties
-  // The default theme (teal) is applied directly to the body
   @include themes.themify(themes.$theme-teal);
 
   // Use a class for each alternative theme
@@ -71,6 +65,18 @@ body {
 
   &.theme-cyan {
     @include themes.themify(themes.$theme-cyan);
+  }
+
+  &.theme-blue {
+    @include themes.themify(themes.$theme-blue);
+  }
+
+  &.theme-green {
+    @include themes.themify(themes.$theme-green);
+  }
+
+  &.theme-red {
+    @include themes.themify(themes.$theme-red);
   }
 }
 

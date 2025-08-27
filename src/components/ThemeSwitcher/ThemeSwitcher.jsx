@@ -3,36 +3,57 @@ import { OverflowMenu, OverflowMenuItem } from "@carbon/react";
 import { ColorPalette } from "@carbon/icons-react";
 import styles from "./ThemeSwitcher.module.scss";
 
-const ThemeSwitcher = () => {
-  const themes = [
-    { name: "teal", label: "Teal", color: "#009d9a" },
-    { name: "purple", label: "Purple", color: "#8a3ffc" },
-    { name: "magenta", label: "Magenta", color: "#d12771" },
-    { name: "cyan", label: "Cyan", color: "#1192e8" },
-  ];
+const THEMES = [
+  { name: "teal", label: "Teal" },
+  { name: "magenta", label: "Magenta" },
+  { name: "cyan", label: "Cyan" },
+  { name: "green", label: "Green" },
+  { name: "purple", label: "Purple" },
+  { name: "blue", label: "Blue" },
 
-  const [currentTheme, setCurrentTheme] = useState(() => {
-    if (typeof window !== "undefined") {
+  { name: "red", label: "Red" },
+];
+
+const getInitialTheme = () => {
+  if (typeof window !== "undefined") {
+    try {
       return localStorage.getItem("theme") || "teal";
+    } catch (error) {
+      console.warn("Could not access localStorage:", error);
+      return "teal";
     }
-    return "teal";
-  });
+  }
+  return "teal";
+};
+
+const ThemeSwitcher = () => {
+  const [currentTheme, setCurrentTheme] = useState(getInitialTheme);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const body = document.body;
-      themes.forEach((theme) => {
+
+      // Remove all theme classes
+      THEMES.forEach((theme) => {
         body.classList.remove(`theme-${theme.name}`);
       });
+
+      // Add current theme class
       body.classList.add(`theme-${currentTheme}`);
-      localStorage.setItem("theme", currentTheme);
+
+      // Persist to localStorage with error handling
+      try {
+        localStorage.setItem("theme", currentTheme);
+      } catch (error) {
+        console.warn("Could not save theme to localStorage:", error);
+      }
     }
   }, [currentTheme]);
 
   return (
     <div className={styles.container}>
       <OverflowMenu renderIcon={ColorPalette} flipped size="sm">
-        {themes.map((theme) => (
+        {THEMES.map((theme) => (
           <OverflowMenuItem
             key={theme.name}
             itemText={
